@@ -1,9 +1,12 @@
 . ~/environment-setup/zsh/functions
 
+#Plugins
+antibody bundle < ~/dotfiles/zsh/.zsh_plugins.txt > ~/dotfiles/zsh/.zsh_plugins.sh
+source ~/dotfiles/zsh/.zsh_plugins.sh
+
 # zsh stuff
-export ZSH="/home/asger/environment-setup"
-ZSH_THEME="af-magic"
-plugins=(git)
+# export ZSH="/home/asger/environment-setup"
+# ZSH_THEME="af-magic"
 
 # Lines configured by zsh-newuser-install
 HISTSIZE=2000
@@ -26,29 +29,6 @@ promptinit
 #Don't do anything in non-interactive
 [[ $- != *i* ]] && return
 
-#A lot of standard Manjaro settings about colours
-. ~/dotfiles/zsh/.manjaro_standard
-
-# Function for enter on empty line https://stackoverflow.com/questions/30169090/zsh-behavior-on-enter
-my-accept-line () {
-    # check if the buffer does not contain any words
-    if [ ${#${(z)BUFFER}} -eq 0 ]; then
-        # put newline so that the output does not start next
-        # to the prompt
-        echo
-        # check if inside git repository
-        if git rev-parse --git-dir > /dev/null 2>&1 ; then
-            # if so, execute `git status'
-            git status
-        else
-            # else run `ls'
-            ls --color=auto
-        fi
-    fi
-    # in any case run the `accept-line' widget
-    zle accept-line
-}
-
 
 #History
 HISTFILE=~/dotfiles/zsh/.histfile
@@ -67,13 +47,6 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 
-#compatability functions for ohmyzsh plugs
-. ~/dotfiles/zsh/.ohmyzsh_compat
-
-#aliases
-if [ -f ~/dotfiles/zsh/.zsh_aliases ];then
-. ~/dotfiles/zsh/.zsh_aliases
-fi
 
 #Python stuff
 export PYTHONBREAKPOINT='ipdb.set_trace'
@@ -100,10 +73,6 @@ zle -N my-accept-line
 # rebind Enter, usually this is `^M'
 bindkey '^M' my-accept-line
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(my-accept-line)
-
-#Plugins
-antibody bundle < ~/dotfiles/zsh/.zsh_plugins.txt > ~/dotfiles/zsh/.zsh_plugins.sh
-source ~/dotfiles/zsh/.zsh_plugins.sh
 
 #My CLI functions
 source ~/dotfiles/zsh/myfuncs
@@ -169,5 +138,3 @@ alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
 
 # create a widget from `my-accept-line' with the same name
 zle -N my-accept-line
-
-plugins+=(git-it-on)

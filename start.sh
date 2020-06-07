@@ -1,14 +1,12 @@
 cd "$(dirname "$0")"
 git pull > /dev/null 2>&1 &
 
-alias python=/usr/bin/python3
-
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
 # tex-filer
 cd $ENDLOSUNG
 git pull > /dev/null 2>&1 &
-python $ENDLOSUNG/latexer/sync.py
+python3 $ENDLOSUNG/latexer/sync.py
 cp -rf $ENDLOSUNG/macro/* $HOME/.config/texstudio/macro
 cp $ENDLOSUNG/texstudio.ini $HOME/.config/texstudio/texstudio.ini
 chmod +x $ENDLOSUNG/latexer/main.pyw

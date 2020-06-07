@@ -1,7 +1,7 @@
 . ~/environment-setup/zsh/functions
 
 #Plugins
-antibody bundle < ~/dotfiles/zsh/.zsh_plugins.txt > ~/dotfiles/zsh/.zsh_plugins.sh
+antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh
 source ~/dotfiles/zsh/.zsh_plugins.sh
 
 # zsh stuff

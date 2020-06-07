@@ -1,0 +1,10 @@
+#!python3
+
+from os import system
+from pathlib import Path
+from sys import argv
+from _environment import interpreter
+
+home = str(Path.home())
+system("%s ~/Nextcloud/Programmering/Python/genveje/genveje.py %s" % (interpreter, " ".join(argv)))
+

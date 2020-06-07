@@ -1,0 +1,26 @@
+#!python3
+
+from os import chdir, system
+from os.path import dirname, realpath
+import sys
+from sys import exit as sysexit
+from pyperclip import copy
+chdir(realpath(dirname(__file__)))
+
+if len(sys.argv) > 1 and sys.argv[-1] == "c":
+    capitalize = True
+else:
+    capitalize = False
+
+try:
+    system("grabc > pc.out 2>&1")
+    with open("pc.out") as f:
+        if capitalize:
+            copy(f.read().strip().upper())
+        else:
+            copy(f.read().strip())
+except KeyboardInterrupt:
+    sysexit()
+
+
+

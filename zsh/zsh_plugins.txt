@@ -1,0 +1,15 @@
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+
+zdharma/fast-syntax-highlighting
+
+denysdovhan/spaceship-prompt
+
+robbyrussell/oh-my-zsh path:plugins/python
+robbyrussell/oh-my-zsh path:plugins/archlinux
+robbyrussell/oh-my-zsh path:plugins/wd
+robbyrussell/oh-my-zsh path:plugins/web-search
+
+peterhurford/git-it-on.zsh
+

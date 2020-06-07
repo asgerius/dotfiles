@@ -1,0 +1,11 @@
+#!python3
+import os
+import sys
+
+user = "s183912@login2.gbar.dtu.dk"
+source, target = sys.argv[1:]
+
+command = f"rsync -rP {user}:~/{source} ~/{target}"
+os.system(command)
+
+

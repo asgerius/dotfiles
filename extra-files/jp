@@ -1,0 +1,18 @@
+#!python3
+from os import chdir, system
+from sys import argv
+
+goto = argv[1] if len(argv) == 2 else "aml"
+
+paths = {
+	"iis": r"/Introduktion\ til\ intelligente\ systemer/Notebooks",
+	"sd": r"/Signaler\ og\ data/Øvelser/Python",
+	"dl": r"/Dyb\ læring/02456-deep-learning-with-PyTorch/",
+	"aml": r"/Aktiv\ machine\ learning\ og\ agency",
+}
+path = "/home/asger/Nextcloud/DTU%s" % paths[goto]
+
+system("jupyter notebook %s" % path)
+
+
+

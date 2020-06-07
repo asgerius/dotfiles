@@ -1,0 +1,68 @@
+
+my-accept-line () {
+    # check if the buffer does not contain any words
+    if [ ${#${(z)BUFFER}} -eq 0 ]; then
+        # put newline so that the output does not start next
+        # to the prompt
+        echo
+        # check if inside git repository
+        if git rev-parse --git-dir > /dev/null 2>&1 ; then
+            # if so, execute `git status'
+            git status
+        else
+            # else run `ls'
+            ls --color=auto
+        fi
+    fi
+    # in any case run the `accept-line' widget
+    zle accept-line
+}
+
+# # ex - archive extractor
+# # usage: ex <file>
+ex () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xjf $1   ;;
+            *.tar.gz)    tar xzf $1   ;;
+            *.bz2)       bunzip2 $1   ;;
+            *.rar)       unrar x $1     ;;
+            *.gz)        gunzip $1    ;;
+            *.tar)       tar xf $1    ;;
+            *.tbz2)      tar xjf $1   ;;
+            *.tgz)       tar xzf $1   ;;
+            *.zip)       unzip $1     ;;
+            *.Z)         uncompress $1;;
+            *.7z)        7z x $1      ;;
+            *)           echo "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+
+# For oh-my-zsh compatibility
+function open_command() {
+  local open_cmd
+
+  # define the open command
+  case "$OSTYPE" in
+    darwin*)  open_cmd='open' ;;
+    cygwin*)  open_cmd='cygstart' ;;
+    linux*)   [[ "$(uname -r)" != *icrosoft* ]] && open_cmd='nohup xdg-open' || {
+                open_cmd='cmd.exe /c start ""'
+                [[ -e "$1" ]] && { 1="$(wslpath -w "${1:a}")" || return 1 }
+              } ;;
+    msys*)    open_cmd='start ""' ;;
+    *)        echo "Platform $OSTYPE not supported"
+              return 1
+              ;;
+  esac
+
+  ${=open_cmd} "$@" &>/dev/null
+}
+
+panmark() {
+	pandoc $1 -o /tmp/t.pdf
+	xdg-open /tmp/t.pdf
+}

@@ -1,0 +1,2 @@
+cd $HOME/Nextcloud
+find . -type f -name '*(conflicted\ copy\ *' -delete

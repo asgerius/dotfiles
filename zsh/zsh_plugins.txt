@@ -4,12 +4,14 @@ zsh-users/zsh-history-substring-search
 
 zdharma/fast-syntax-highlighting
 
-denysdovhan/spaceship-prompt
-
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/git-prompt
 robbyrussell/oh-my-zsh path:plugins/python
 robbyrussell/oh-my-zsh path:plugins/archlinux
 robbyrussell/oh-my-zsh path:plugins/wd
 robbyrussell/oh-my-zsh path:plugins/web-search
+
+andyfleming/oh-my-zsh path:themes/af-magic.zsh-theme
 
 peterhurford/git-it-on.zsh
 

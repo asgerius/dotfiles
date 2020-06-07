@@ -17,7 +17,11 @@ chsh $(which zsh)
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 
 # Installerer ting
-sudo apt install xdotool grabc antibody
+sudo apt install xdotool grabc
+cd ~/Downloads
+wget https://github.com/getantibody/antibody/releases/download/v6.0.1/antibody_6.0.1_linux_386.deb
+sudo apt install ./antibody_6.0.1_linux_386.deb
+cd ~
 
 # Sætter latex-config op
 git clone https://github.com/asgerius/latex-utilities.git ~/Desktop/latex-utilities

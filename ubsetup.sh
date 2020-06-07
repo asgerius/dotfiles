@@ -11,7 +11,7 @@ git config --global credential.helper store
 
 # Installerer zsh
 sudo apt install zsh
-chsh $(which zsh)
+chsh -s $(which zsh)
 
 # Sætter .*rc-fil op
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc

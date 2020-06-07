@@ -12,9 +12,10 @@ source ~/environment-setup/zsh/.zsh_plugins.sh
 HISTSIZE=2000
 SAVEHIST=3000
 bindkey -v
+HISTFILE=~/.zsh_history
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-# zstyle :compinstall filename '/home/sorenwh/dotfiles/zsh/.zshrc'
+# zstyle :compinstall filename "/home/sorenwh/dotfiles/zsh/.zshrc"
 
 autoload -Uz compinit promptinit
 compinit
@@ -26,19 +27,19 @@ promptinit
 # Copied from bashrc 
 #
 
-#Don't do anything in non-interactive
+#Don"t do anything in non-interactive
 [[ $- != *i* ]] && return
 
 #Python stuff
-export PYTHONBREAKPOINT='ipdb.set_trace'
+export PYTHONBREAKPOINT="ipdb.set_trace"
 export PYTHONPATH=$PYTHONPATH:$HOME/Nextcloud/semester4/fagprojekt/projekt
 
 #TeX stuff
-export TEXINPUTS='.:~/Desktop/latex-utilities:'
+export TEXINPUTS=".:~/Desktop/latex-utilities:"
 
 #Completion
-zstyle ':completion:*' menu select
-zstyle ':completion::complete:*' gain-privileges 1
+zstyle ":completion:*" menu select
+zstyle ":completion::complete:*" gain-privileges 1
 setopt COMPLETE_ALIASES
 setopt ALWAYS_TO_END
 setopt AUTO_MENU
@@ -49,13 +50,13 @@ setopt MENU_COMPLETE
 setopt AUTO_CD
 setopt PUSHDMINUS
 
-# create a widget from `my-accept-line' with the same name
+# create a widget from `my-accept-line" with the same name
 zle -N my-accept-line
-# rebind Enter, usually this is `^M'
-bindkey '^M' my-accept-line
+# rebind Enter, usually this is `^M"
+bindkey "^M" my-accept-line
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(my-accept-line)
 
-export LANG=en_US.UTF-8
+#export LANG=en_US.UTF-8
 
 NEXTCLOUD=$HOME/Nextcloud
 DTU=$NEXTCLOUD/DTU
@@ -114,5 +115,5 @@ alias endlosung="$HOME/Desktop/EndLosung"
 alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
 
 
-# create a widget from `my-accept-line' with the same name
-zle -N my-accept-line
+# create a widget from `my-accept-line" with the same name
+#zle -N my-accept-line

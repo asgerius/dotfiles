@@ -100,7 +100,7 @@ alias ss="sc prog ss"
 alias itu="sc prog itu"
 alias syrup="xmaple $DTU/Ahornsirup/utils_source.mw $DTU/Ahornsirup/syrup_source.mw"
 
-alias hpc="ssh login2.gbar.dtu.dk -l s183912"
+alias hpc="ssh login2.gbar.dtu.dk -l s183912 -t 'exec zsh'"
 alias maple="~/maple2019/bin/maple"
 alias xmaple="setsid ~/maple2019/bin/xmaple"
 alias matlab="setsid $HOME/Matlab/R2019b/bin/matlab"

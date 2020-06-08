@@ -12,7 +12,7 @@ robbyrussell/oh-my-zsh path:plugins/web-search
 
 peterhurford/git-it-on.zsh
 
-#robbyrussell/oh-my-zsh path:themes/muse.zsh-theme
+robbyrussell/oh-my-zsh path:themes/muse.zsh-theme
 #robbyrussell/oh-my-zsh path:themes/af-magic.zsh-theme
-robbyrussell/oh-my-zsh path:themes/avit.zsh-theme
+#robbyrussell/oh-my-zsh path:themes/avit.zsh-theme
 #denysdovhan/spaceship-prompt

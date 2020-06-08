@@ -1,25 +1,34 @@
 . ~/environment-setup/zsh/functions
 
 #Plugins
-antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh
 source ~/environment-setup/zsh/.zsh_plugins.sh
-
-# zsh stuff
-# export ZSH="/home/asger/environment-setup"
-# ZSH_THEME="af-magic"
 
 # Lines configured by zsh-newuser-install
 HISTSIZE=2000
 SAVEHIST=3000
 bindkey -v
 HISTFILE=~/.zsh_history
+PROMPT_COMMAND='history -a'
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 # zstyle :compinstall filename "/home/sorenwh/dotfiles/zsh/.zshrc"
 
-autoload -Uz compinit promptinit
-compinit
-promptinit
+# autoload -Uz compinit promptinit
+# compinit
+# promptinit
 
 # End of lines added by compinstall
 
@@ -113,7 +122,5 @@ alias pitu="$NEXTCLOUD/Programmering/indian-tech-support"
 alias endlosung="$HOME/Desktop/EndLosung"
 
 alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
+alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh"
 
-
-# create a widget from `my-accept-line" with the same name
-#zle -N my-accept-line

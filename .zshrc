@@ -1,3 +1,5 @@
+export HOSTNAME=$(cat /proc/sys/kernel/hostname)
+
 . ~/environment-setup/zsh/functions
 
 #Plugins
@@ -89,7 +91,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 alias src="~/environment-setup/start.sh && source ~/.zshrc"
-if [ ! -d /zhome/d3/f/137655 ]; then
+if [ "$HOSTNAME" != "gbarlogin2" ]; then
 	alias python="/usr/local/bin/python3"
 	alias pip="/usr/local/bin/pip3"
 fi

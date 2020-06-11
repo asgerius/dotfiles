@@ -44,7 +44,6 @@ export LANG=C.UTF-8
 
 # Python stuff
 export PYTHONBREAKPOINT="ipdb.set_trace"
-export PYTHONPATH=$PYTHONPATH:$HOME/Nextcloud/semester4/fagprojekt/projekt
 
 # Completion
 zstyle ":completion:*" menu select
@@ -90,8 +89,10 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 alias src="~/environment-setup/start.sh && source ~/.zshrc"
-alias python="/usr/local/bin/python3"
-alias pip="/usr/local/bin/pip3"
+if [ ! -d /zhome/d3/f/137655 ]; then
+	alias python="/usr/local/bin/python3"
+	alias pip="/usr/local/bin/pip3"
+fi
 alias close-emulator="rm -rf $HOME/.android/avd/flutterboi.avd/*.lock"
 alias run-emulator="close-emulator ; flutter emulators --launch flutterboi"
 

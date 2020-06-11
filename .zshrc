@@ -43,9 +43,6 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 export PYTHONBREAKPOINT="ipdb.set_trace"
 export PYTHONPATH=$PYTHONPATH:$HOME/Nextcloud/semester4/fagprojekt/projekt
 
-#TeX stuff
-export TEXINPUTS=".:~/Desktop/latex-utilities:"
-
 #Completion
 zstyle ":completion:*" menu select
 zstyle ":completion::complete:*" gain-privileges 1

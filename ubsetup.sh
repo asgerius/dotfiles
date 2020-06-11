@@ -23,12 +23,17 @@ wget https://github.com/getantibody/antibody/releases/download/v6.0.1/antibody_6
 sudo apt install ./antibody_6.0.1_linux_386.deb
 cd ~
 
-# Sætter latex-config op
+# Sætter latexting op
 git clone https://github.com/asgerius/latex-utilities.git ~/Desktop/latex-utilities
 cd ~/Desktop/latex-utilities
 chmod +x setup.py
 chmod +x update-tex
 python3 setup.py
+
+TEXMF=$HOME/texmf/tex/latex/local
+mkdir -p $TEXMF
+cd $TEXMF
+mkdir SpeedyGonzales MediocreMike Blastoise
 
 # Opretter bin
 cd $HOME

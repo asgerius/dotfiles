@@ -2,14 +2,18 @@ cd "$(dirname "$0")"
 git pull > /dev/null 2>&1 &
 
 ENDLOSUNG=$HOME/Desktop/latex-utilities
+TEXMF=$HOME/texmf/tex/latex/local
 
 # tex-filer
 cd $ENDLOSUNG
 git pull > /dev/null 2>&1 &
-python3 $ENDLOSUNG/latexer/sync.py
-cp -rf $ENDLOSUNG/macro/* $HOME/.config/texstudio/macro
-cp $ENDLOSUNG/texstudio.ini $HOME/.config/texstudio/texstudio.ini
-chmod +x $ENDLOSUNG/latexer/main.pyw
+python3 latexer/sync.py
+cp -rf macro/* $HOME/.config/texstudio/macro
+cp texstudio.ini $HOME/.config/texstudio/texstudio.ini
+chmod +x latexer/main.pyw
+cp -f SpeedyGonzales.sty $TEXMF/SpeedyGonzales/SpeedyGonzales.sty
+cp -f MediocreMike.sty $TEXMF/MediocreMike/MediocreMike.sty
+cp -f Blastoise.sty $TEXMF/Blastoise/Blastoise.sty
 
 # bin-filer
 cp $ENDLOSUNG/convert-to-table.py $HOME/bin

@@ -41,9 +41,6 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 #Don"t do anything in non-interactive
 [[ $- != *i* ]] && return
 
-# Encoding
-export LANG=C.UTF-8
-
 # Python stuff
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
@@ -90,11 +87,16 @@ export PATH="$HOME/cmdline-tools/tools/bin:$PATH"
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-alias src="~/environment-setup/start.sh && source ~/.zshrc"
-if [ "$HOSTNAME" != "gbarlogin2" ]; then
+# Stuff thats different on hpc and elsewhere
+if [ "$HOSTNAME" != "gbarlogin2" ];
+then
 	alias python="/usr/local/bin/python3"
 	alias pip="/usr/local/bin/pip3"
+	export LANG=C.UTF-8
+else
+	export LANG=da_DK.utf8
 fi
+alias src="~/environment-setup/start.sh && source ~/.zshrc"
 alias close-emulator="rm -rf $HOME/.android/avd/flutterboi.avd/*.lock"
 alias run-emulator="close-emulator ; flutter emulators --launch flutterboi"
 

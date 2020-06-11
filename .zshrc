@@ -39,11 +39,14 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 #Don"t do anything in non-interactive
 [[ $- != *i* ]] && return
 
-#Python stuff
+# Encoding
+export LANG=C.UTF-8
+
+# Python stuff
 export PYTHONBREAKPOINT="ipdb.set_trace"
 export PYTHONPATH=$PYTHONPATH:$HOME/Nextcloud/semester4/fagprojekt/projekt
 
-#Completion
+# Completion
 zstyle ":completion:*" menu select
 zstyle ":completion::complete:*" gain-privileges 1
 setopt COMPLETE_ALIASES
@@ -52,7 +55,7 @@ setopt AUTO_MENU
 setopt COMPLETE_IN_WORD
 setopt MENU_COMPLETE
 
-#Cd
+# Cd
 setopt AUTO_CD
 setopt PUSHDMINUS
 

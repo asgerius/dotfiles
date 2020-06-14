@@ -95,6 +95,7 @@ then
 	export LANG=C.UTF-8
 else
 	export LANG=da_DK.utf8
+	module load python3/3.7.5
 fi
 alias src="~/environment-setup/start.sh && source ~/.zshrc"
 alias close-emulator="rm -rf $HOME/.android/avd/flutterboi.avd/*.lock"

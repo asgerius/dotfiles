@@ -70,6 +70,8 @@ DTU=$NEXTCLOUD/DTU
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
 export PYTHONPATH=$PYTHONPATH:$HOME/Desktop/rl-rubiks
+export PYTHONPATH=$PYTHONPATH:~/Desktop/librubiks
+export PYTHONPATH=$PYTHONPATH:~/Desktop/pelutils
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export ANDROID_HOME=$HOME/Android/Sdk

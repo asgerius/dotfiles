@@ -69,21 +69,21 @@ NEXTCLOUD=$HOME/Nextcloud
 DTU=$NEXTCLOUD/DTU
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
-export PYTHONPATH=${PYTHONPATH}:${HOME}/Desktop/rl-rubiks
+export PYTHONPATH=$PYTHONPATH:$HOME/Desktop/rl-rubiks
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export ANDROID_AVD_HOME=$HOME/.android/avd
 
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="/usr/local/node/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-export PATH="$ENDLOSUNG:$PATH"
+export PATH=$PATH:~/.local/bin
+export PATH=$PATH:/usr/local/node/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:$ENDLOSUNG
 export PATH=$PATH:~/bin
-export PATH="$PATH:~/flutter/bin"
-export PATH="$HOME/android-studio/bin:$PATH"
-export PATH="$HOME/cmdline-tools/tools/bin:$PATH"
+export PATH=$PATH:~/flutter/bin
+export PATH=$PATH:~/android-studio/bin
+export PATH=$PATH:~/cmdline-tools/tools/bin
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 

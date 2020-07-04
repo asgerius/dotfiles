@@ -10,14 +10,14 @@ cd $HOME
 git config --global credential.helper store
 
 # Installerer zsh
-sudo pacman -Syyy zsh
+yes y | sudo pacman -S zsh
 chsh -s $(which zsh)
 
 # Sætter .*rc-fil op
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 
 # Installerer ting
-sudo pacman -Syyy xdotool
+yes y | sudo pacman -S xdotool
 yes n | yay -Syy grabc
 cd ~/Downloads
 wget https://github.com/getantibody/antibody/releases/download/v6.0.1/antibody_6.0.1_linux_386.deb

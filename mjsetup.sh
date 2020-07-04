@@ -19,10 +19,7 @@ echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 # Installerer ting
 yes y | sudo pacman -S xdotool
 yes n | yay -Syy grabc
-cd ~/Downloads
-wget https://github.com/getantibody/antibody/releases/download/v6.0.1/antibody_6.0.1_linux_386.deb
-sudo apt install ./antibody_6.0.1_linux_386.deb
-cd ~
+yay -Syy antibody-bin
 
 # Sætter latexting op
 git clone https://github.com/asgerius/latex-utilities.git ~/Desktop/latex-utilities

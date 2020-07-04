@@ -19,9 +19,12 @@ echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 # Installerer ting
 yes y | sudo pacman -S xdotool
 yes n | yay -Syy grabc
-yay -Syy antibody-bin
+yes n | yay -Syy antibody-bin
 
 # Sætter latexting op
+yes n | yay -Syyy texlive-full
+yes y | sudo pacman -S texstudio
+
 git clone https://github.com/asgerius/latex-utilities.git ~/Desktop/latex-utilities
 cd ~/Desktop/latex-utilities
 chmod +x setup.py

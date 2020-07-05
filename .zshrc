@@ -71,24 +71,24 @@ NEXTCLOUD=$HOME/Nextcloud
 DTU=$NEXTCLOUD/DTU
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
-export PYTHONPATH=$PYTHONPATH:$HOME/Desktop/rl-rubiks
+export PYTHONPATH=$PYTHONPATH:~/Desktop/rl-rubiks
 export PYTHONPATH=$PYTHONPATH:~/Desktop/librubiks
 export PYTHONPATH=$PYTHONPATH:~/Desktop/pelutils
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
-export ANDROID_HOME=$HOME/Android/Sdk
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export ANDROID_AVD_HOME=$HOME/.android/avd
+export ANDROID_HOME=/opt/android-sdk
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export ANDROID_AVD_HOME=~/.android/avd
 
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:/usr/local/node/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$ENDLOSUNG
 export PATH=$PATH:~/bin
-export PATH=$PATH:~/flutter/bin
+#export PATH=$PATH:~/flutter/bin
 export PATH=$PATH:~/android-studio/bin
 export PATH=$PATH:~/cmdline-tools/tools/bin
-export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Stuff thats different on hpc and elsewhere

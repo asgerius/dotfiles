@@ -25,6 +25,8 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 # End of lines configured by zsh-newuser-install
+autoload -Uz compinit
+compinit
 # The following lines were added by compinstall
 # zstyle :compinstall filename "/home/sorenwh/dotfiles/zsh/.zshrc"
 

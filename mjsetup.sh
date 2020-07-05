@@ -44,3 +44,7 @@ mkdir -p bin
 cd $SCRIPTPATH
 chmod +x start.sh
 ./start.sh
+
+source ~/.zshrc
+plugins
+

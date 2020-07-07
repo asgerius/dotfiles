@@ -48,3 +48,14 @@ chmod +x start.sh
 source ~/.zshrc
 plugins
 
+# Installer Python
+cd ~/Downloads
+wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tar.xz
+tar xf Python-3.8.3.tar.xz
+cd Python-3.8.3
+sudo ./configure --enable-optimizations
+sudo make altinstall
+sudo ln -s /usr/local/bin/python3.8 /usr/local/bin/python3
+sudo ln -s /usr/local/bin/pip3.8 /usr/local/bin/pip3
+cd ~
+

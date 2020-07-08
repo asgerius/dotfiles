@@ -25,8 +25,8 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 # End of lines configured by zsh-newuser-install
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 # The following lines were added by compinstall
 # zstyle :compinstall filename "/home/sorenwh/dotfiles/zsh/.zshrc"
 
@@ -76,9 +76,9 @@ export PYTHONPATH=$PYTHONPATH:~/Desktop/librubiks
 export PYTHONPATH=$PYTHONPATH:~/Desktop/pelutils
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
-export ANDROID_HOME=/opt/android-sdk
-export ANDROID_SDK_ROOT=/opt/android-sdk
-export ANDROID_AVD_HOME=~/.android/avd
+export ANDROID_HOME=~/Android/Sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+# export ANDROID_AVD_HOME=~/.android/avd
 
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:/usr/local/node/bin
@@ -86,19 +86,25 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$ENDLOSUNG
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/flutter/bin
-export PATH=$PATH:~/android-studio/bin
-export PATH=$PATH:~/cmdline-tools/tools/bin
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# export ANDROID_SDK_ROOT=$ANDROID_HOME
+# export ANDROID_PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools
+# # export FLUTTER=$BASE_DIR/bin
+# export PATH=$PATH:$ANDROID_PATH
 
 # Stuff thats different on hpc and elsewhere
 if [ "$HOSTNAME" != "gbarlogin2" ];
 then
 	alias python="/usr/local/bin/python3"
 	alias pip="/usr/local/bin/pip3"
+	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
 	export LANG=C.UTF-8
+	export LANGUAGE=C.UTF-8
+	export LC_ALL=C.UTF-8 gnucash
 else
-	export LANG=da_DK.utf8
+	export LANG=da_DK.UTF8
 	module load python3/3.7.5
 fi
 alias src="~/environment-setup/start.sh && source ~/.zshrc"

@@ -22,7 +22,7 @@ yes n | yay -Syy grabc
 yes n | yay -Syy antibody-bin
 
 # Sætter latexting op
-yes n | yay -Syyy texlive-full
+yes "1-3, 10" | yay texlive
 yes y | sudo pacman -S texstudio
 
 git clone https://github.com/asgerius/latex-utilities.git ~/Desktop/latex-utilities
@@ -40,14 +40,6 @@ mkdir SpeedyGonzales MediocreMike Blastoise
 cd $HOME
 mkdir -p bin
 
-# Kører opstart
-cd $SCRIPTPATH
-chmod +x start.sh
-./start.sh
-
-source ~/.zshrc
-plugins
-
 # Installer Python
 cd ~/Downloads
 wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tar.xz
@@ -58,4 +50,12 @@ sudo make altinstall
 sudo ln -s /usr/local/bin/python3.8 /usr/local/bin/python3
 sudo ln -s /usr/local/bin/pip3.8 /usr/local/bin/pip3
 cd ~
+
+# Kører opstart
+cd $SCRIPTPATH
+chmod +x start.sh
+./start.sh
+
+source ~/.zshrc
+plugins
 

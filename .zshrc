@@ -100,9 +100,8 @@ then
 	alias python="/usr/local/bin/python3"
 	alias pip="/usr/local/bin/pip3"
 	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
-	export LANG=C.UTF-8
-	export LANGUAGE=C.UTF-8
-	export LC_ALL=C.UTF-8 gnucash
+	export LANG=da_DK.UTF-8
+	export LANGUAGE=da_DK.UTF-8
 else
 	export LANG=da_DK.UTF8
 	module load python3/3.7.5

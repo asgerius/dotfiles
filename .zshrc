@@ -71,7 +71,6 @@ NEXTCLOUD=$HOME/Nextcloud
 DTU=$NEXTCLOUD/DTU
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
-export PYTHONPATH=$PYTHONPATH:~/Desktop/rl-rubiks
 export PYTHONPATH=$PYTHONPATH:~/Desktop/librubiks
 export PYTHONPATH=$PYTHONPATH:~/Desktop/pelutils
 export PYTHONBREAKPOINT="ipdb.set_trace"

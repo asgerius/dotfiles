@@ -24,21 +24,10 @@ setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
-# End of lines configured by zsh-newuser-install
-# autoload -Uz compinit
-# compinit
-# The following lines were added by compinstall
-# zstyle :compinstall filename "/home/sorenwh/dotfiles/zsh/.zshrc"
 
-# autoload -Uz compinit promptinit
-# compinit
-# promptinit
-
-# End of lines added by compinstall
-
-#
-# Copied from bashrc 
-#
+autoload -Uz compinit promptinit
+compinit
+promptinit
 
 #Don"t do anything in non-interactive
 [[ $- != *i* ]] && return

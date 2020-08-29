@@ -20,6 +20,8 @@ echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 yes y | sudo pacman -S xdotool
 yes n | yay -Syy grabc
 yes n | yay -Syy antibody-bin
+yay -Syy ld-lsb
+yay -Syy libselinux
 
 # Sætter latexting op
 yes "1-3, 10" | yay texlive

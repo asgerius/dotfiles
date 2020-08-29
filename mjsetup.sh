@@ -41,14 +41,16 @@ cd $HOME
 mkdir -p bin
 
 # Installer Python
+vpython="3.8.5"
+mvpython="3.8"
 cd ~/Downloads
-wget https://www.python.org/ftp/python/3.8.3/Python-3.8.3.tar.xz
-tar xf Python-3.8.3.tar.xz
-cd Python-3.8.3
+wget https://www.python.org/ftp/python/$vpython/Python-$vpython.tar.xz
+tar xf Python-$vpython.tar.xz
+cd Python-$vpython
 sudo ./configure --enable-optimizations
 sudo make altinstall
-sudo ln -s /usr/local/bin/python3.8 /usr/local/bin/python3
-sudo ln -s /usr/local/bin/pip3.8 /usr/local/bin/pip3
+sudo ln -s /usr/local/bin/python$mvpython /usr/local/bin/python3
+sudo ln -s /usr/local/bin/pip$mvpython /usr/local/bin/pip3
 cd ~
 
 # Kører opstart

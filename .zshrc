@@ -103,9 +103,6 @@ alias ss="sc prog ss"
 alias itu="sc prog itu"
 alias syrup="xmaple $DTU/Ahornsirup/utils_source.mw $DTU/Ahornsirup/syrup_source.mw"
 
-alias hpc="ssh login2.gbar.dtu.dk -l s183912 -t 'exec zsh'"
-alias rasp="ssh pi@10.11.131.34 -t 'exec zsh'"
-
 alias maple="~/maple2020/bin/maple"
 alias xmaple="setsid ~/maple2020/bin/xmaple"
 alias matlab="setsid $HOME/MATLAB/R2020a/bin/matlab > /dev/null 2>&1 &"
@@ -131,3 +128,10 @@ alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/env
 
 # https://unix.stackexchange.com/questions/264632/what-is-the-correct-way-to-view-your-cpu-speed-on-linux
 alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
+
+# Remote stuff
+alias hpc="ssh login2.gbar.dtu.dk -l s183912 -t 'exec zsh'"
+
+raspberry_ip=10.42.0.208
+alias rasp="ssh pi@$raspberry_ip -t 'exec zsh'"
+sshfs -o allow_other,default_permissions pi@$raspberry_ip:/ ~/raspberry

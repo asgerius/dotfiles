@@ -83,7 +83,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export PATH=$PATH:$ANDROID_PATH
 
 # Stuff thats different on hpc and elsewhere
-if [ "$HOSTNAME" != "gbarlogin2" ];
+if [ "$HOSTNAME" != "gbarlogin2" ];jedi function parameter
 then
 	alias python="/usr/local/bin/python3"
 	alias pip="/usr/local/bin/pip3"
@@ -134,4 +134,3 @@ alias hpc="ssh login2.gbar.dtu.dk -l s183912 -t 'exec zsh'"
 
 raspberry_ip=10.42.0.208
 alias rasp="ssh pi@$raspberry_ip -t 'exec zsh'"
-sshfs -o allow_other,default_permissions pi@$raspberry_ip:/ ~/raspberry

@@ -25,3 +25,5 @@ chmod +x -R $HOME/bin/
 
 cc-clear
 
+raspberry_ip=10.42.0.208
+sshfs -o allow_other,default_permissions pi@$raspberry_ip:/ ~/raspberry

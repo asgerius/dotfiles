@@ -83,7 +83,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # export PATH=$PATH:$ANDROID_PATH
 
 # Stuff thats different on hpc and elsewhere
-if [ "$HOSTNAME" != "gbarlogin2" ];jedi function parameter
+if [ "$HOSTNAME" != "gbarlogin2" ];
 then
 	alias python="/usr/local/bin/python3"
 	alias pip="/usr/local/bin/pip3"

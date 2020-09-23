@@ -134,3 +134,4 @@ alias hpc="ssh login2.gbar.dtu.dk -l s183912 -t 'exec zsh'"
 
 raspberry_ip=10.42.0.208
 alias rasp="ssh pi@$raspberry_ip -t 'exec zsh'"
+alias setrasp="sshfs -o allow_other,default_permissions pi@$raspberry_ip:/ ~/raspberry"

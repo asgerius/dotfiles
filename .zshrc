@@ -61,7 +61,7 @@ DTU=$NEXTCLOUD/DTU
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
 export PYTHONPATH=$PYTHONPATH:~/Desktop/librubiks
-export PYTHONPATH=$PYTHONPATH:~/Desktop/pelutils
+# export PYTHONPATH=$PYTHONPATH:~/Desktop/pelutils
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export ANDROID_HOME=~/Android/Sdk
@@ -82,6 +82,10 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # # export FLUTTER=$BASE_DIR/bin
 # export PATH=$PATH:$ANDROID_PATH
 
+# if [ -d "$HOME/platform-tools" ] ; then
+#   export PATH="$HOME/platform-tools:$PATH"
+# fi
+
 # Stuff thats different on hpc and elsewhere
 if [ "$HOSTNAME" != "gbarlogin2" ];
 then
@@ -94,7 +98,8 @@ else
 	export LANG=da_DK.UTF8
 	module load python3/3.7.5
 fi
-alias src="~/environment-setup/start.sh && source ~/.zshrc"
+alias start="~/environment-setup/start.sh"
+alias src="source ~/.zshrc"
 alias close-emulator="rm -rf $HOME/.android/avd/flutterboi.avd/*.lock"
 alias run-emulator="close-emulator ; flutter emulators --launch flutterboi"
 
@@ -135,3 +140,5 @@ alias hpc="ssh login2.gbar.dtu.dk -l s183912 -t 'exec zsh'"
 raspberry_ip=10.42.0.208
 alias rasp="ssh pi@$raspberry_ip -t 'exec zsh'"
 alias setrasp="sshfs -o allow_other,default_permissions pi@$raspberry_ip:/ ~/raspberry"
+
+

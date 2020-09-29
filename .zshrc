@@ -73,9 +73,12 @@ export PATH=$PATH:/usr/local/node/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$ENDLOSUNG
 export PATH=$PATH:~/bin
+
 export PATH=$PATH:~/flutter/bin
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export PATH=$PATH:~/Desktop/main/bin
 
 # export ANDROID_SDK_ROOT=$ANDROID_HOME
 # export ANDROID_PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools

@@ -1,27 +1,27 @@
 cd "$(dirname "$0")"
 git pull > /dev/null 2>&1 &
 
-ENDLOSUNG=$HOME/Desktop/latex-utilities
-TEXMF=$HOME/texmf/tex/latex/local
+ENDLOSUNG=~/Desktop/latex-utilities
+TEXMF=~/texmf/tex/latex/local
 
 # tex-filer
 cd $ENDLOSUNG
 git pull > /dev/null 2>&1 &
 python3 latexer/sync.py
-cp -rf macro/* $HOME/.config/texstudio/macro
-cp texstudio.ini $HOME/.config/texstudio/texstudio.ini
+cp -rf macro/* ~/.config/texstudio/macro
+cp texstudio.ini ~/.config/texstudio/texstudio.ini
 chmod +x latexer/main.pyw
 cp -f SpeedyGonzales.sty $TEXMF/SpeedyGonzales/SpeedyGonzales.sty
 cp -f MediocreMike.sty $TEXMF/MediocreMike/MediocreMike.sty
 cp -f Blastoise.sty $TEXMF/Blastoise/Blastoise.sty
 
 # bin-filer
-cp $ENDLOSUNG/convert-to-table.py $HOME/bin
-mv $HOME/bin/convert-to-table.py $HOME/bin/ctt
-chmod +x $HOME/bin/ctt
+cp $ENDLOSUNG/convert-to-table.py ~/bin
+mv ~/bin/convert-to-table.py ~/bin/ctt
+chmod +x ~/bin/ctt
 
-cp $HOME/Nextcloud/Programmering/Start-scripts/mj-filer/* $HOME/bin
-chmod +x -R $HOME/bin/
+cp ~/environment-setup/extra-files/* ~/bin
+chmod +x -R ~/bin/
 
 cc-clear
 

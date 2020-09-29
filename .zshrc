@@ -62,6 +62,7 @@ ENDLOSUNG=$HOME/Desktop/latex-utilities
 
 export PYTHONPATH=$PYTHONPATH:~/Desktop/librubiks
 # export PYTHONPATH=$PYTHONPATH:~/Desktop/pelutils
+export PYTHONPATH=$PYTHONPATH:~/Desktop/main
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export ANDROID_HOME=~/Android/Sdk

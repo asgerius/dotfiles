@@ -1,12 +1,12 @@
-cd "$(dirname "$0")"
-git pull > /dev/null 2>&1 &
+cd ~/environment-setup
+git pull
 
 ENDLOSUNG=~/Desktop/latex-utilities
 TEXMF=~/texmf/tex/latex/local
 
 # tex-filer
 cd $ENDLOSUNG
-git pull > /dev/null 2>&1 &
+git pull
 python3 latexer/sync.py
 cp -rf macro/* ~/.config/texstudio/macro
 cp texstudio.ini ~/.config/texstudio/texstudio.ini
@@ -24,7 +24,3 @@ cp ~/environment-setup/extra-files/* ~/bin
 chmod +x -R ~/bin/
 
 cc-clear
-
-raspberry_ip=10.42.0.208
-# TODO: Make this try except
-sshfs -o allow_other,default_permissions pi@$raspberry_ip:/ ~/raspberry

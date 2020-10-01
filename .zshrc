@@ -79,7 +79,7 @@ export PATH=$PATH:~/flutter/bin
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export PATH=$PATH:~/Desktop/main/bin
+export PATH=$PATH:~/Desktop/main
 
 # export ANDROID_SDK_ROOT=$ANDROID_HOME
 # export ANDROID_PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools
@@ -93,8 +93,8 @@ export PATH=$PATH:~/Desktop/main/bin
 # Stuff thats different on hpc and elsewhere
 if [ "$HOSTNAME" != "gbarlogin2" ];
 then
-	alias python="/usr/local/bin/python3"
-	alias pip="/usr/local/bin/pip3"
+	alias python="/usr/bin/python"
+	alias pip="/usr/bin/pip"
 	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
 	export LANG=da_DK.UTF-8
 	export LANGUAGE=da_DK.UTF-8

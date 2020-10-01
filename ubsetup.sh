@@ -5,7 +5,7 @@
 # Kræver genstart efter kørsel
 
 SCRIPTPATH=~/environment-setup
-cd $HOME
+cd ~
 
 git config --global credential.helper store
 

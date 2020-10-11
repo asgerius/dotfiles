@@ -81,6 +81,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:~/Desktop/main
 
+export ALPHAVANTAGE_API_KEY=FQSLCXLX5610F802
+
 # export ANDROID_SDK_ROOT=$ANDROID_HOME
 # export ANDROID_PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools
 # # export FLUTTER=$BASE_DIR/bin

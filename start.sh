@@ -4,6 +4,8 @@ git pull
 ENDLOSUNG=~/Desktop/latex-utilities
 TEXMF=~/texmf/tex/latex/local
 
+xmodmap -e "keycode 110 = Delete"
+
 # tex-filer
 cd $ENDLOSUNG
 git pull

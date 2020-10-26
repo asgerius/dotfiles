@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# https://www.reddit.com/r/kde/comments/8h92z0/command_line_command_to_switch_virtual_desktop/
+from os import system
+import numpy as np
+from subprocess import check_output
+from sys import argv
+
+current = int(check_output(["qdbus", "org.kde.KWin", "/KWin", "currentDesktop"])) - 1
+direction = argv[1]
+
+state = np.zeros(4, dtype=int)
+state[current] = 1
+state = state.reshape((2, 2))
+
+if direction == "left":
+    state = np.roll(state, -1, axis=1)
+elif direction == "right":
+    state = np.roll(state, 1, 1)
+elif direction == "up":
+    state = np.roll(state, -1, 0)
+elif direction == "down":
+    state = np.roll(state, 1, 0)
+
+new = np.where(state.flat)[0] + 1
+system("qdbus org.kde.KWin /KWin setCurrentDesktop %i" % new)

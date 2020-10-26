@@ -1,10 +1,9 @@
-#!python3
+#!/usr/bin/env python3
 
 from os import system
 from pathlib import Path
 from sys import argv
-from _environment import interpreter
 
 home = str(Path.home())
-system("%s ~/Nextcloud/Programmering/Python/genveje/genveje.py %s" % (interpreter, " ".join(argv)))
+system("%s ~/Nextcloud/Programmering/Python/genveje/genveje.py %s" % ("python3", " ".join(argv)))
 

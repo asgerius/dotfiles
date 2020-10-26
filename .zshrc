@@ -144,7 +144,7 @@ alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
 # Remote stuff
 alias hpc="ssh login2.gbar.dtu.dk -l s183912 -t 'exec zsh'"
 
-raspberry_ip=10.42.0.208
+raspberry_ip=10.11.131.222
 alias rasp="ssh pi@$raspberry_ip -t 'exec zsh'"
 alias setrasp="sshfs -o allow_other,default_permissions pi@$raspberry_ip:/ ~/raspberry"
 

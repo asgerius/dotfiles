@@ -3,5 +3,5 @@ from os import system
 from sys import argv
 
 mode = argv[1] if len(argv) == 2 else 0
-system("%s /home/asger/Desktop/latex-utilities/latexer/main.pyw %s" % ("python3", mode))
+system("%s /home/asger/Desktop/latex-utilities/latexer/main.pyw %s" % ("python", mode))
 

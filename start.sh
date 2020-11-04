@@ -10,19 +10,19 @@ xmodmap -e "keycode 110 = Delete"
 cd $ENDLOSUNG
 git pull
 python3 latexer/sync.py
-cp -rf macro/* ~/.config/texstudio/macro
-cp texstudio.ini ~/.config/texstudio/texstudio.ini
+yes | cp -rf macro/* ~/.config/texstudio/macro
+yes | cp -f texstudio.ini ~/.config/texstudio/texstudio.ini
 chmod +x latexer/main.pyw
-cp -f SpeedyGonzales.sty $TEXMF/SpeedyGonzales/SpeedyGonzales.sty
-cp -f MediocreMike.sty $TEXMF/MediocreMike/MediocreMike.sty
-cp -f Blastoise.sty $TEXMF/Blastoise/Blastoise.sty
+yes | cp -f SpeedyGonzales.sty $TEXMF/SpeedyGonzales/SpeedyGonzales.sty
+yes | cp -f MediocreMike.sty $TEXMF/MediocreMike/MediocreMike.sty
+yes | cp -f Blastoise.sty $TEXMF/Blastoise/Blastoise.sty
 
 # bin-filer
-cp $ENDLOSUNG/convert-to-table.py ~/bin
-mv ~/bin/convert-to-table.py ~/bin/ctt
+yes | cp $ENDLOSUNG/convert-to-table.py ~/bin
+yes | mv ~/bin/convert-to-table.py ~/bin/ctt
 chmod +x ~/bin/ctt
 
-cp ~/environment-setup/extra-files/* ~/bin
+yes | cp ~/environment-setup/extra-files/* ~/bin
 chmod +x -R ~/bin/
 
 cc-clear

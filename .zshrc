@@ -96,8 +96,8 @@ export ALPHAVANTAGE_API_KEY=FQSLCXLX5610F802
 # Stuff thats different on hpc and elsewhere
 if [ "$HOSTNAME" != "gbarlogin2" ];
 then
-	alias python="/usr/bin/python"
-	alias pip="/usr/bin/pip"
+	alias python="/usr/local/bin/python3"
+	alias pip="/usr/local/bin/pip3"
 	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
 	export LANG=da_DK.UTF-8
 	export LANGUAGE=da_DK.UTF-8

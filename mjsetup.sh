@@ -54,6 +54,8 @@ sudo ./configure --enable-optimizations
 sudo make altinstall
 sudo ln -sf /usr/local/bin/python$mvpython /usr/local/bin/python3
 sudo ln -sf /usr/local/bin/pip$mvpython /usr/local/bin/pip3
+alias python="/usr/local/bin/python3"
+alias pip="/usr/local/bin/pip3"
 pip install --upgrade pip
 pip install wheel
 pip install pillow olefile pyserial==3.4 tenacity==6.2.0 coverage hypothesis matplotlib numpy imageio networkx scipy scikit-learn pyperclip requests wget opencv-python flask flask_cors flask_restful pylint pytest ipython ipdb jupyter jstyleson chardet pdf2image pytesseract

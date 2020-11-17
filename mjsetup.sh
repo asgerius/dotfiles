@@ -45,6 +45,7 @@ mkdir -p bin
 # Installer Python
 vpython="3.9.0"
 mvpython="3.9"
+sudo pacman -S tk
 cd ~/Downloads
 wget https://www.python.org/ftp/python/$vpython/Python-$vpython.tar.xz
 tar xf Python-$vpython.tar.xz

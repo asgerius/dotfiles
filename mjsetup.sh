@@ -58,7 +58,7 @@ alias python="/usr/local/bin/python3"
 alias pip="/usr/local/bin/pip3"
 pip install --upgrade pip
 pip install wheel
-pip install pillow olefile pyserial==3.4 tenacity==6.2.0 coverage hypothesis matplotlib numpy imageio networkx scipy scikit-learn pyperclip requests wget opencv-python flask flask_cors flask_restful pylint pytest ipython ipdb jupyter jstyleson chardet pdf2image pytesseract
+pip install pillow olefile pyserial==3.4 tenacity==6.2.0 coverage hypothesis matplotlib numpy imageio networkx scipy scikit-learn pyperclip requests wget opencv-python flask flask_cors flask_restful pylint pytest ipython ipdb jupyter jstyleson chardet pdf2image pytesseract bs4
 pip install torch==1.7.0+cpu torchvision==0.8.1+cpu torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 cd ~
 

@@ -1,3 +1,4 @@
+#!/usr/bin/zsh
 cd ~/environment-setup
 git pull
 

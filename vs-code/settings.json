@@ -1,0 +1,35 @@
+{
+    "files.autoSave": "afterDelay",
+    "workbench.startupEditor": "newUntitledFile",
+    "telemetry.enableTelemetry": false,
+    "[dart]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnType": false,
+        "editor.rulers": [
+            125
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "terminal.external.linuxExec": "truecolor",
+    "todo-tree.tree.showScanModeButton": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 16,
+    "C_Cpp.updateChannel": "Insiders",
+    "explorer.confirmDelete": false,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "window.zoomLevel": 0,
+    "python.pythonPath": "python",
+    // "python.languageServer": "Pylance",
+    // "python.analysis.typeCheckingMode": "basic",
+    // "python.analysis.completeFunctionParens": true
+    "todo-tree.highlights.enabled": false,
+    "dart.openDevTools": "flutter",
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "python.dataScience.alwaysTrustNotebooks": true
+}

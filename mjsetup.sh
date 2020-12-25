@@ -18,15 +18,15 @@ chsh -s $(which zsh)
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 
 # Installerer ting
-yes y | sudo pacman -S xdotool
-yes n | yay -Syy grabc
-yes n | yay -Syy antibody-bin
+sudo pacman -S xdotool
+yay -Syy grabc
+yay -Syy antibody-bin
 yay -Syy ld-lsb
 yay -Syy libselinux
 
 # Sætter latexting op
-yes "1-3, 10" | yay texlive
-yes y | sudo pacman -S texstudio
+yay texlive  # 1-3, 10
+sudo pacman -S texstudio
 
 git clone https://github.com/asgerius/latex-utilities.git ~/Desktop/latex-utilities
 cd ~/Desktop/latex-utilities
@@ -44,7 +44,7 @@ cd $HOME
 mkdir -p bin
 
 # Installer Python
-vpython="3.9.0"
+vpython="3.9.1"
 mvpython="3.9"
 sudo pacman -S tk
 cd ~/Downloads
@@ -60,11 +60,15 @@ alias pip="/usr/local/bin/pip3"
 pip install --upgrade pip
 pip install wheel
 pip install pillow olefile pyserial==3.4 tenacity==6.2.0 coverage hypothesis matplotlib numpy imageio networkx scipy scikit-learn pyperclip requests wget opencv-python flask flask_cors flask_restful pylint pytest ipython ipdb jupyter jstyleson chardet pdf2image pytesseract bs4
-pip install torch==1.7.0+cpu torchvision==0.8.1+cpu torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch==1.7.1+cpu torchvision==0.8.2+cpu torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 cd ~
+
+# Sætter vs code op (antager allerede installeret)
+cp $SCRIPTPATH/vs-code/* ~/.config/Code/User
 
 # Kører opstart
 cd $SCRIPTPATH
+mkdir ~/bin
 chmod +x start.sh
 ./start.sh
 

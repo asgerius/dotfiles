@@ -19,11 +19,11 @@ yes | cp -f MediocreMike.sty $TEXMF/MediocreMike/MediocreMike.sty
 yes | cp -f Blastoise.sty $TEXMF/Blastoise/Blastoise.sty
 
 # bin-filer
+yes | cp ~/environment-setup/extra-files/* ~/bin
+chmod +x -R ~/bin/
+
 yes | cp $ENDLOSUNG/convert-to-table.py ~/bin
 yes | mv ~/bin/convert-to-table.py ~/bin/ctt
 chmod +x ~/bin/ctt
-
-yes | cp ~/environment-setup/extra-files/* ~/bin
-chmod +x -R ~/bin/
 
 cc-clear

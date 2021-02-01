@@ -5,8 +5,6 @@
 # Kræver genstart efter kørsel
 
 SCRIPTPATH=~/environment-setup
-cd ~
-mkdir ~/bin
 
 git config --global credential.helper store
 
@@ -18,11 +16,13 @@ chsh -s $(which zsh)
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 
 # Installerer ting
+sudo pacman -S base-devel
 sudo pacman -S xdotool
 yay -Syy grabc
 yay -Syy antibody-bin
 yay -Syy ld-lsb
 yay -Syy libselinux
+yay python-llvmlite-bin
 
 # Sætter latexting op
 yay texlive  # 1-3, 10
@@ -34,13 +34,13 @@ chmod +x setup.py
 chmod +x update-tex
 python3 setup.py
 
-TEXMF=$HOME/texmf/tex/latex/local
+TEXMF=~/texmf/tex/latex/local
 mkdir -p $TEXMF
 cd $TEXMF
 mkdir SpeedyGonzales MediocreMike Blastoise
 
 # Opretter bin
-cd $HOME
+cd ~
 mkdir -p bin
 
 # Installer Python
@@ -50,6 +50,7 @@ sudo pacman -S tk
 cd ~/Downloads
 wget https://www.python.org/ftp/python/$vpython/Python-$vpython.tar.xz
 tar xf Python-$vpython.tar.xz
+rm Python-$vpython.tar.xz
 cd Python-$vpython
 sudo ./configure --enable-optimizations
 sudo make altinstall
@@ -59,12 +60,16 @@ alias python="/usr/local/bin/python3"
 alias pip="/usr/local/bin/pip3"
 pip install --upgrade pip
 pip install wheel
-pip install pillow olefile pyserial==3.4 tenacity==6.2.0 coverage hypothesis matplotlib numpy imageio networkx scipy scikit-learn pyperclip requests wget opencv-python flask flask_cors flask_restful pylint pytest ipython ipdb jupyter jstyleson chardet pdf2image pytesseract bs4
+pip install -r $SCRIPTPATH/requirements.txt
+pip install numba
 pip install torch==1.7.1+cpu torchvision==0.8.2+cpu torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 cd ~
 
 # Sætter vs code op (antager allerede installeret)
 cp $SCRIPTPATH/vs-code/* ~/.config/Code/User
+
+# Sætter .zshrc op
+echo "source ~/environment-setup/.zshrc" >> ~/.zshrc
 
 # Kører opstart
 cd $SCRIPTPATH

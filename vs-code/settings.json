@@ -1,5 +1,5 @@
 {
-    "files.autoSave": "afterDelay",
+    // "files.autoSave": "afterDelay",
     "workbench.startupEditor": "newUntitledFile",
     "telemetry.enableTelemetry": false,
     "[dart]": {
@@ -12,17 +12,19 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
+        "editor.wordBasedSuggestions": false,
+    },
+    "editor.tokenColorCustomizations": {
+        "[Default Dark+]": {
+            "variables": "#DDDDDD"
+        }
     },
     "terminal.external.linuxExec": "truecolor",
     "todo-tree.tree.showScanModeButton": false,
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontSize": 16,
-    "C_Cpp.updateChannel": "Insiders",
+    "editor.fontSize": 15,
     "explorer.confirmDelete": false,
-    "remote.SSH.remoteServerListenOnSocket": true,
-    "window.zoomLevel": 0,
-    "python.pythonPath": "python",
+    "window.zoomLevel": 1,
     // "python.languageServer": "Pylance",
     // "python.analysis.typeCheckingMode": "basic",
     // "python.analysis.completeFunctionParens": true
@@ -31,5 +33,14 @@
     "files.exclude": {
         "**/__pycache__": true
     },
-    "python.dataScience.alwaysTrustNotebooks": true
+    "jupyter.alwaysTrustNotebooks": true,
+    "python.defaultInterpreterPath": "python",
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "python.languageServer": "Pylance",
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Default Dark+",
+    "explorer.confirmDragAndDrop": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "python.showStartPage": false,
 }

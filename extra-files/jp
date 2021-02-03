@@ -2,13 +2,14 @@
 from os import chdir, system
 from sys import argv
 
-goto = argv[1] if len(argv) == 2 else "aml"
+goto = argv[1] if len(argv) == 2 else "css"
 
 paths = {
 	"iis": r"/Introduktion\ til\ intelligente\ systemer/Notebooks",
 	"sd": r"/Signaler\ og\ data/Øvelser/Python",
 	"dl": r"/Dyb\ læring/02456-deep-learning-with-PyTorch/",
 	"aml": r"/Aktiv\ machine\ learning\ og\ agency",
+	"css": r"/6.\ semester/Social\ informatik/comsocsci2021",
 }
 path = "/home/asger/Nextcloud/DTU%s" % paths[goto]
 

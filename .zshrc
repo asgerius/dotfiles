@@ -103,7 +103,7 @@ then
 	export LANGUAGE=da_DK.UTF-8
 else
 	export LANG=da_DK.UTF8
-	module load python3/3.7.5
+	module load python3/3.8.4
 	module load gcc/9.2.0
 fi
 alias start="~/environment-setup/start.sh"

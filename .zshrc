@@ -61,9 +61,7 @@ NEXTCLOUD=$HOME/Nextcloud
 DTU=$NEXTCLOUD/DTU
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
-export PYTHONPATH=$PYTHONPATH:~/Desktop/librubiks
-# export PYTHONPATH=$PYTHONPATH:~/Desktop/pelutils
-export PYTHONPATH=$PYTHONPATH:~/Desktop/main
+export PYTHONPATH=$PYTHONPATH:~/Desktop/pyaccount
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export ANDROID_HOME=~/Android/Sdk

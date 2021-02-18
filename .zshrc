@@ -62,6 +62,7 @@ DTU=$NEXTCLOUD/DTU
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
 export PYTHONPATH=$PYTHONPATH:~/Desktop/pyaccount
+export PYTHONPATH=$PYTHONPATH:~/Desktop/symobolic-ai-1-mavis/searchclient
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export ANDROID_HOME=~/Android/Sdk

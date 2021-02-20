@@ -62,7 +62,7 @@ DTU=$NEXTCLOUD/DTU
 ENDLOSUNG=$HOME/Desktop/latex-utilities
 
 export PYTHONPATH=$PYTHONPATH:~/Desktop/pyaccount
-export PYTHONPATH=$PYTHONPATH:~/Desktop/symobolic-ai-1-mavis/searchclient
+export PYTHONPATH=$PYTHONPATH:~/Desktop/symbolic-ai/searchclient
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export ANDROID_HOME=~/Android/Sdk
@@ -95,8 +95,13 @@ export ALPHAVANTAGE_API_KEY=FQSLCXLX5610F802
 # Stuff thats different on hpc and elsewhere
 if [ "$HOSTNAME" != "gbarlogin2" ];
 then
-	alias python="/usr/local/bin/python3"
-	alias pip="/usr/local/bin/pip3"
+	# alias python="/usr/local/bin/python3"
+	# alias pip="/usr/local/bin/pip3"
+	if command -v pyenv 1>/dev/null 2>&1;
+	then
+		eval "$(pyenv init -)"
+		pyenv shell 3.9.1
+	fi
 	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
 	export LANG=da_DK.UTF-8
 	export LANGUAGE=da_DK.UTF-8

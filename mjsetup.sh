@@ -44,20 +44,23 @@ cd ~
 mkdir -p bin
 
 # Installer Python
-vpython="3.9.1"
-mvpython="3.9"
-sudo pacman -S tk
-cd ~/Downloads
-wget https://www.python.org/ftp/python/$vpython/Python-$vpython.tar.xz
-tar xf Python-$vpython.tar.xz
-rm Python-$vpython.tar.xz
-cd Python-$vpython
-sudo ./configure --enable-optimizations
-sudo make altinstall
-sudo ln -sf /usr/local/bin/python$mvpython /usr/local/bin/python3
-sudo ln -sf /usr/local/bin/pip$mvpython /usr/local/bin/pip3
-alias python="/usr/local/bin/python3"
-alias pip="/usr/local/bin/pip3"
+# vpython="3.9.1"
+yay pyenv
+pyenv install 3.9.1
+pyenv shell 3.9.1
+# mvpython="3.9"
+# sudo pacman -S tk
+# cd ~/Downloads
+# wget https://www.python.org/ftp/python/$vpython/Python-$vpython.tar.xz
+# tar xf Python-$vpython.tar.xz
+# rm Python-$vpython.tar.xz
+# cd Python-$vpython
+# sudo ./configure --enable-optimizations
+# sudo make altinstall
+# sudo ln -sf /usr/local/bin/python$mvpython /usr/local/bin/python3
+# sudo ln -sf /usr/local/bin/pip$mvpython /usr/local/bin/pip3
+# alias python="/usr/local/bin/python3"
+# alias pip="/usr/local/bin/pip3"
 pip install --upgrade pip
 pip install wheel
 pip install -r $SCRIPTPATH/requirements.txt

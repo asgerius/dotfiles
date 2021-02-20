@@ -21,7 +21,7 @@ flask_restful
 pylint
 pytest
 pytest-cov
-ipython 
+ipython
 ipdb
 jupyter
 jstyleson
@@ -32,3 +32,4 @@ pdf2image
 pytesseract
 bs4
 pelutils
+click

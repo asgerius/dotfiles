@@ -13,7 +13,7 @@ paths = {
 }
 path = "/home/asger/Nextcloud/DTU%s" % paths[goto]
 
-system("jupyter notebook %s" % path)
+system("jupyter lab %s" % path)
 
 
 

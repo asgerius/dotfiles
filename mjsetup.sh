@@ -26,6 +26,7 @@ yay python-llvmlite-bin
 
 # Sætter latexting op
 yay texlive  # 1-3, 10
+yay texlive-pictures
 sudo pacman -S texstudio
 
 git clone https://github.com/asgerius/latex-utilities.git ~/Desktop/latex-utilities

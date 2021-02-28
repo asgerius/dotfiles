@@ -49,6 +49,7 @@ mkdir -p bin
 yay pyenv
 pyenv install 3.9.1
 pyenv shell 3.9.1
+pyenv global 3.9.1
 # mvpython="3.9"
 # sudo pacman -S tk
 # cd ~/Downloads

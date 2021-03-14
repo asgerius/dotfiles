@@ -110,10 +110,10 @@ then
 	export LANG=da_DK.UTF-8
 	export LANGUAGE=da_DK.UTF-8
 else
+        source /.bashrc
 	export LANG=da_DK.UTF8
 	module load python3/3.8.4
 	module load gcc/9.2.0
-        source /.bashrc
 fi
 alias start="~/environment-setup/start.sh"
 alias src="source ~/.zshrc"

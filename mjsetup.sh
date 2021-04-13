@@ -12,6 +12,9 @@ git config --global credential.helper store
 yes y | sudo pacman -S zsh
 chsh -s $(which zsh)
 
+# tmux config
+ln -S ~/environment-setup
+
 # Sætter .*rc-fil op
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 

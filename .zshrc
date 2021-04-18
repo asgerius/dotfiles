@@ -95,25 +95,24 @@ export ALPHAVANTAGE_API_KEY=FQSLCXLX5610F802
 #   export PATH="$HOME/platform-tools:$PATH"
 # fi
 
+alias hpc-fs="sshfs s183912@login2.gbar.dtu.dk:/zhome/d3/f/137655 ~/hpc"
+alias hpc-fs-work3="sshfs s183912@login2.gbar.dtu.dk:/work3/s183912 ~/hpc-work3"
+
 # Stuff thats different on hpc and elsewhere
-if [ "$HOSTNAME" != "gbarlogin2" ];
+if [[ $HOSTNAME == *"gbarlogin2"* || $HOSTNAME == *"gbarlogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"n-62-12-19"* || $HOSTNAME == *"n-62-20-1"* || $HOSTNAME == *"n-62-20-9"* ]];
 then
+	export LANG=da_DK.UTF8
+else
 	# alias python="/usr/local/bin/python3"
 	# alias pip="/usr/local/bin/pip3"
 	if command -v pyenv 1>/dev/null 2>&1;
 	then
 		eval "$(pyenv init -)"
 		alias pip="python -m pip"
-		# pyenv shell 3.9.1
 	fi
 	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
 	export LANG=da_DK.UTF-8
 	export LANGUAGE=da_DK.UTF-8
-else
-        source /.bashrc
-	export LANG=da_DK.UTF8
-	module load python3/3.8.4
-	module load gcc/9.2.0
 fi
 alias start="~/environment-setup/start.sh"
 alias src="source ~/.zshrc"

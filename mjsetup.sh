@@ -79,6 +79,10 @@ cp $SCRIPTPATH/vs-code/* ~/.config/Code/User
 # Sætter .zshrc op
 echo "source ~/environment-setup/.zshrc" >> ~/.zshrc
 
+# HPC-mapper
+mkdir ~/hpc
+mkdir ~/hpc-work3
+
 # Kører opstart
 cd $SCRIPTPATH
 mkdir ~/bin

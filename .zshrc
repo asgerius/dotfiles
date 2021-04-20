@@ -95,9 +95,6 @@ export ALPHAVANTAGE_API_KEY=FQSLCXLX5610F802
 #   export PATH="$HOME/platform-tools:$PATH"
 # fi
 
-alias hpc-fs="sshfs s183912@login2.gbar.dtu.dk:/zhome/d3/f/137655 ~/hpc"
-alias hpc-fs-work3="sshfs s183912@login2.gbar.dtu.dk:/work3/s183912 ~/hpc-work3"
-
 # Stuff thats different on hpc and elsewhere
 if [[ $HOSTNAME == *"gbarlogin2"* || $HOSTNAME == *"gbarlogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"n-62-12-19"* || $HOSTNAME == *"n-62-20-1"* || $HOSTNAME == *"n-62-20-9"* ]];
 then
@@ -154,7 +151,10 @@ alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/env
 alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
 
 # Remote stuff
-alias hpc="ssh login2.gbar.dtu.dk -l s183912 -t 'exec zsh'"
+alias hpc="ssh login2.gbar.dtu.dk -l s183912"
+alias hpc1="ssh login1.gbar.dtu.dk -l s183912"
+alias hpc-fs="sshfs s183912@login2.gbar.dtu.dk:/zhome/d3/f/137655 ~/hpc"
+alias hpc-fs-work3="sshfs s183912@login2.gbar.dtu.dk:/work3/s183912 ~/hpc-work3"
 
 export raspberry_ip=10.11.131.105
 alias rasp="ssh pi@$raspberry_ip -t 'exec zsh'"

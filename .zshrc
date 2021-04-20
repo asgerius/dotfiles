@@ -102,7 +102,7 @@ alias hpc-fs-work3="sshfs s183912@login2.gbar.dtu.dk:/work3/s183912 ~/hpc-work3"
 if [[ $HOSTNAME == *"gbarlogin2"* || $HOSTNAME == *"gbarlogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"n-62-12-19"* || $HOSTNAME == *"n-62-20-1"* || $HOSTNAME == *"n-62-20-9"* ]];
 then
 	module load python3/3.8.4
-	module load gcc/9.2.0
+	module swap gcc/9.2.0
 	export PYTHONPATH=$PYTHONPATH:~/daluke
 	export LANG=da_DK.UTF8
 else

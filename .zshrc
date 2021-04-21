@@ -98,9 +98,7 @@ export ALPHAVANTAGE_API_KEY=FQSLCXLX5610F802
 # Stuff thats different on hpc and elsewhere
 if [[ $HOSTNAME == *"gbarlogin2"* || $HOSTNAME == *"gbarlogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"n-62-12-19"* || $HOSTNAME == *"n-62-20-1"* || $HOSTNAME == *"n-62-20-9"* ]];
 then
-	module load python3/3.8.4
-	module swap gcc/9.2.0
-	export PYTHONPATH=$PYTHONPATH:~/daluke
+	source ~/.hpcrc
 	export LANG=da_DK.UTF8
 else
 	# alias python="/usr/local/bin/python3"

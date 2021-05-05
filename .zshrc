@@ -55,12 +55,6 @@ zle -N my-accept-line
 bindkey "^M" my-accept-line
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(my-accept-line)
 
-#export LANG=en_US.UTF-8
-
-NEXTCLOUD=$HOME/Nextcloud
-DTU=$NEXTCLOUD/DTU
-ENDLOSUNG=$HOME/Desktop/latex-utilities
-
 export PYTHONPATH=$PYTHONPATH:~/Desktop/pyaccount
 export PYTHONPATH=$PYTHONPATH:~/Desktop/symbolic-ai/searchclient
 export PYTHONBREAKPOINT="ipdb.set_trace"
@@ -112,35 +106,19 @@ else
 	export LANG=da_DK.UTF-8
 	export LANGUAGE=da_DK.UTF-8
 fi
-alias start="~/environment-setup/start.sh"
+alias jupyter="python -m jupyter lab"
+
 alias src="source ~/.zshrc"
 alias close-emulator="rm -rf $HOME/.android/avd/flutterboi.avd/*.lock"
 alias run-emulator="close-emulator ; flutter emulators --launch flutterboi"
 
-alias psc="sc prog genveje"
-alias ss="sc prog ss"
-alias itu="sc prog itu"
-alias syrup="xmaple $DTU/Ahornsirup/utils_source.mw $DTU/Ahornsirup/syrup_source.mw"
-
-alias maple="~/maple2020/bin/maple"
 alias xmaple="setsid ~/maple2020/bin/xmaple"
 alias matlab="setsid $HOME/MATLAB/R2020a/bin/matlab > /dev/null 2>&1 &"
 alias pycharm="setsid /usr/local/bin/charm . > /dev/null 2>&1 &"
 alias intellij="setsid $HOME/intellij/bin/idea.sh . > /dev/null 2>&1 &"
 alias android="setsid studio.sh . > /dev/null 2>&1 &"
-alias caprine="setsid snap run caprine > /dev/null 2>&1 &"
-alias heroku="snap run heroku"
 
-alias ksp="setsid $HOME/KSP_linux/KSP.x86_64"
-
-alias nc="~/Nextcloud"
-
-alias dtu="$DTU"
-alias psyrup="$DTU/Ahornsirup"
-
-alias prog="$NEXTCLOUD/Programmering"
 alias pitu="$NEXTCLOUD/Programmering/indian-tech-support"
-alias endlosung="$HOME/Desktop/EndLosung"
 
 alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
 alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh"
@@ -153,9 +131,3 @@ alias hpc="ssh login2.gbar.dtu.dk -l s183912"
 alias hpc1="ssh login1.gbar.dtu.dk -l s183912"
 alias hpc-fs="sshfs s183912@login2.gbar.dtu.dk:/zhome/d3/f/137655 ~/hpc"
 alias hpc-fs-work3="sshfs s183912@login2.gbar.dtu.dk:/work3/s183912 ~/hpc-work3"
-
-export raspberry_ip=10.11.131.105
-alias rasp="ssh pi@$raspberry_ip -t 'exec zsh'"
-alias setrasp="sshfs -o allow_other,default_permissions pi@$raspberry_ip:/ ~/raspberry"
-
-

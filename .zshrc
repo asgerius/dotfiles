@@ -99,9 +99,12 @@ else
 	# alias pip="/usr/local/bin/pip3"
 	if command -v pyenv 1>/dev/null 2>&1;
 	then
+		export PYENV_ROOT="$HOME/.pyenv"
+		export PATH=$PATH:$PYENV_ROOT/bin
+		eval "$(pyenv init --path)"
 		eval "$(pyenv init -)"
-		alias pip="python -m pip"
 	fi
+	alias pip="python -m pip"
 	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
 	export LANG=da_DK.UTF-8
 	export LANGUAGE=da_DK.UTF-8

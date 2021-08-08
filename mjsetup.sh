@@ -6,6 +6,8 @@
 
 SCRIPTPATH=~/environment-setup
 
+git config --global user.email "asger.s@protonmail.com"
+git config --global user.name "Asger Schultz"
 git config --global credential.helper store
 git config --global alias.fukd "push -f"
 echo """

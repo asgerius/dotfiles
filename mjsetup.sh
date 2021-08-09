@@ -37,8 +37,8 @@ yay texlive-pictures
 sudo pacman -S texstudio
 
 # Open texstudio before this step
-git clone https://github.com/asgerius/latex-utilities.git ~/Desktop/latex-utilities
-cd ~/Desktop/latex-utilities
+git clone https://github.com/asgerius/latex-utilities.git ~/latex-utilities
+cd ~/latex-utilities
 chmod +x setup.py
 chmod +x update-tex
 python3 setup.py

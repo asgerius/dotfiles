@@ -72,6 +72,7 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/flutter/bin
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/.pub-cache/bin
 
 export PATH=$PATH:~/Desktop/main
 

@@ -24,7 +24,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontSize": 15,
     "explorer.confirmDelete": false,
-    "window.zoomLevel": 1,
     // "python.languageServer": "Pylance",
     // "python.analysis.typeCheckingMode": "basic",
     // "python.analysis.completeFunctionParens": true
@@ -43,4 +42,23 @@
     "explorer.confirmDragAndDrop": false,
     "C_Cpp.updateChannel": "Insiders",
     "python.showStartPage": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "[Default Dark+]": {
+        "rules": {
+            "selfParameter": "#569CD6",
+            "clsParameter": "#569CD6"
+        }
+    }
 }

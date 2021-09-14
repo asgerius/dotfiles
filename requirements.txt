@@ -34,3 +34,6 @@ pytesseract
 bs4
 pelutils
 click
+ujson
+tensorflow
+pyicu

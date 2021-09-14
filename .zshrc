@@ -6,6 +6,9 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
+# Allow comments with hastags
+setopt interactivecomments
+
 #Plugins
 source ~/environment-setup/zsh/.zsh_plugins.sh
 

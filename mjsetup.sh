@@ -33,8 +33,7 @@ yay -Syy libselinux
 yay python-llvmlite-bin
 
 # Sætter latexting op
-yay texlive  # 1-3, 10
-yay texlive-pictures
+sudo pacman -S texlive-most
 sudo pacman -S texstudio
 
 # Open texstudio before this step
@@ -53,10 +52,15 @@ mkdir SpeedyGonzales MediocreMike Blastoise
 cd ~
 mkdir -p bin
 
+# Steder til ssh-mapper
+mkdir ~/hpc
+mkdir ~/hpc-work3
+mkdir ~/raspberry-pi
+
 # Installer Python
-vpython="3.9.6"
+vpython="3.9.7"
 yay pyenv
-pyenv install 3.7.10
+pyenv install 3.7.12
 pyenv install $vpython
 pyenv shell $vpython
 pyenv global $vpython
@@ -64,7 +68,15 @@ pip install --upgrade pip
 pip install wheel
 pip install -r ~/environment-setup/requirements.txt
 pip install numba
+pip install --upgrade numpy
+pip install wikipedia2vec==1.0.4
+# CPU
 pip install torch==1.9.0+cpu torchvision==0.10.0+cpu torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+# CUDA
+# pip install torch torchvision torchaudio
+# ROCM
+# pip install torch -f https://download.pytorch.org/whl/rocm4.2/torch_stable.html
+# pip install torchvision==0.10.0 -f https://download.pytorch.org/whl/rocm4.2/torch_stable.html
 
 # Sætter vs code op (antager allerede installeret)
 cp ~/environment-setup/vs-code/* ~/.config/Code/User
@@ -72,13 +84,8 @@ cp ~/environment-setup/vs-code/* ~/.config/Code/User
 # Sætter .zshrc op
 echo "source ~/environment-setup/.zshrc" >> ~/.zshrc
 
-# HPC-mapper
-mkdir ~/hpc
-mkdir ~/hpc-work3
-
 # Kører opstart
 cd ~/environment-setup
-mkdir ~/bin
 chmod +x start.sh
 ./start.sh
 
@@ -90,3 +97,7 @@ yay signal-desktop
 yay discord
 yay teams
 yay slack-desktop
+
+# Diverse programmer
+yay spotify
+yay nextcloud-client

@@ -77,9 +77,10 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/.pub-cache/bin
 
-if command -v pyenv 1>/dev/null 2>&1;
+# Setup pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+if [ -d "$PYENV_ROOT" ];
 then
-	export PYENV_ROOT="$HOME/.pyenv"
 	export PATH=$PATH:$PYENV_ROOT/bin
 	eval "$(pyenv init --path)"
 	eval "$(pyenv init -)"

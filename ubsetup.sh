@@ -13,6 +13,9 @@ git config --global credential.helper store
 sudo apt install zsh
 chsh -s $(which zsh)
 
+# Udviklingsting
+sudo apt install build-essential libbz2-dev libssl-dev libreadline-dev libffi-dev
+
 # Sætter .*rc-fil op
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 
@@ -43,3 +46,5 @@ mkdir -p bin
 cd $SCRIPTPATH
 chmod +x start.sh
 ./start.sh
+
+sudo locale-gen "da_DK.UTF-8"

@@ -58,8 +58,8 @@ mkdir ~/hpc-work3
 mkdir ~/raspberry-pi
 
 # Installer Python
-vpython="3.9.7"
 yay pyenv
+vpython="3.9.7"
 pyenv install 3.7.12
 pyenv install $vpython
 pyenv shell $vpython

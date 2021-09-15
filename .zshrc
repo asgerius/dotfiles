@@ -77,12 +77,13 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/.pub-cache/bin
 
-export PATH=$PATH:~/Desktop/main
-
-export PYENV_ROOT=~/.pyenv
-export PATH=$PATH:$PYENV_ROOT/bin
-
-export ALPHAVANTAGE_API_KEY=FQSLCXLX5610F802
+if command -v pyenv 1>/dev/null 2>&1;
+then
+	export PYENV_ROOT="$HOME/.pyenv"
+	export PATH=$PATH:$PYENV_ROOT/bin
+	eval "$(pyenv init --path)"
+	eval "$(pyenv init -)"
+fi
 
 # export ANDROID_SDK_ROOT=$ANDROID_HOME
 # export ANDROID_PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools
@@ -99,15 +100,6 @@ then
 	source ~/.hpcrc
 	export LANG=da_DK.UTF8
 else
-	# alias python="/usr/local/bin/python3"
-	# alias pip="/usr/local/bin/pip3"
-	if command -v pyenv 1>/dev/null 2>&1;
-	then
-		export PYENV_ROOT="$HOME/.pyenv"
-		export PATH=$PATH:$PYENV_ROOT/bin
-		eval "$(pyenv init --path)"
-		eval "$(pyenv init -)"
-	fi
 	alias pip="python -m pip"
 	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
 	export LANG=da_DK.UTF-8

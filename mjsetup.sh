@@ -92,6 +92,11 @@ chmod +x start.sh
 source ~/.zshrc
 plugins
 
+# Flutter
+cd ~
+git clone https://github.com/flutter/flutter.git -b stable
+flutter doctor
+
 # Kommunikation
 yay signal-desktop
 yay discord

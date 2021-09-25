@@ -66,7 +66,7 @@ pyenv shell $vpython
 pyenv global $vpython
 pip install --upgrade pip
 pip install wheel
-pip install -r ~/environment-setup/requirements.txt
+pip install --upgrade -r ~/environment-setup/requirements.txt
 pip install numba
 pip install --upgrade numpy
 pip install wikipedia2vec==1.0.4

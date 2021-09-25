@@ -106,6 +106,7 @@ else
 	export LANG=da_DK.UTF-8
 	export LANGUAGE=da_DK.UTF-8
 fi
+alias pytest="python -m pytest"
 alias jupyter="python -m jupyter lab"
 
 alias src="source ~/.zshrc"

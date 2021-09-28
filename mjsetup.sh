@@ -31,6 +31,7 @@ yay -Syy antibody-bin
 yay -Syy ld-lsb
 yay -Syy libselinux
 yay python-llvmlite-bin
+yay unzip
 
 # Sætter latexting op
 sudo pacman -S texlive-most

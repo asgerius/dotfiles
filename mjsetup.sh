@@ -59,6 +59,7 @@ mkdir ~/hpc-work3
 mkdir ~/raspberry-pi
 
 # Installer Python
+sudo pacman -S tk
 yay pyenv
 vpython="3.9.7"
 pyenv install 3.7.12

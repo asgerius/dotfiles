@@ -38,7 +38,7 @@ sudo pacman -S texlive-most
 sudo pacman -S texstudio
 
 # Open texstudio before this step
-git clone https://github.com/asgerius/latex-utilities.git ~/latex-utilities
+git clone git@github.com:asgerius/latex-utilities.git ~/latex-utilities
 cd ~/latex-utilities
 chmod +x setup.py
 chmod +x update-tex
@@ -57,11 +57,19 @@ mkdir -p bin
 mkdir ~/hpc
 mkdir ~/hpc-work3
 mkdir ~/raspberry-pi
+mkdir ~/ci-mumbojumbo
+mkdir ~/ci-testdevice
+
+# Sætter .zshrc op
+echo "source ~/environment-setup/.zshrc" > ~/.zshrc
+source ~/.zshrc
+plugins
+src
 
 # Installer Python
 sudo pacman -S tk
 yay pyenv
-vpython="3.9.7"
+vpython=3.9.9
 pyenv install 3.7.12
 pyenv install $vpython
 pyenv shell $vpython
@@ -70,41 +78,25 @@ pip install --upgrade pip
 pip install wheel
 pip install --upgrade -r ~/environment-setup/requirements.txt
 pip install numba
-pip install --upgrade numpy
-pip install wikipedia2vec==1.0.4
-# CPU
-pip install torch==1.9.0+cpu torchvision==0.10.0+cpu torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 # CUDA
-# pip install torch torchvision torchaudio
-# ROCM
-# pip install torch -f https://download.pytorch.org/whl/rocm4.2/torch_stable.html
-# pip install torchvision==0.10.0 -f https://download.pytorch.org/whl/rocm4.2/torch_stable.html
+# pip install torch torchvision torchaudio --upgrade --no-cache-dir
 
 # Sætter vs code op (antager allerede installeret)
 cp ~/environment-setup/vs-code/* ~/.config/Code/User
-
-# Sætter .zshrc op
-echo "source ~/environment-setup/.zshrc" >> ~/.zshrc
 
 # Kører opstart
 cd ~/environment-setup
 chmod +x start.sh
 ./start.sh
 
-source ~/.zshrc
-plugins
-
 # Flutter
 cd ~
 git clone https://github.com/flutter/flutter.git -b stable
 flutter doctor
 
-# Kommunikation
+# Programmer
 yay signal-desktop
 yay discord
 yay teams
 yay slack-desktop
-
-# Diverse programmer
 yay spotify
-yay nextcloud-client

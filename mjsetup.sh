@@ -9,19 +9,6 @@ git config --global user.name "Asger Schultz"
 git config --global pull.rebase true
 git config --global credential.helper store
 git config --global alias.fukd "push -f"
-echo """
-[alias]
-lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-lg = !"git lg1"
-""" >> ~/.gitconfig
-
-# Installerer zsh
-yes y | sudo pacman -S zsh
-chsh -s $(which zsh)
-
-# tmux config
-ln -S ~/environment-setup
 
 # Installerer ting
 sudo pacman -S base-devel
@@ -62,6 +49,7 @@ mkdir ~/ci-testdevice
 
 # Sætter .zshrc op
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
+. ~/environment-setup/zsh/functions
 source ~/.zshrc
 plugins
 src
@@ -69,7 +57,7 @@ src
 # Installer Python
 sudo pacman -S tk
 yay pyenv
-vpython=3.9.9
+vpython=3.10.6
 pyenv install 3.7.12
 pyenv install $vpython
 pyenv shell $vpython

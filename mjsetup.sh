@@ -35,6 +35,9 @@ TEXMF=~/texmf/tex/latex/local
 mkdir -p $TEXMF
 cd $TEXMF
 mkdir SpeedyGonzales MediocreMike Blastoise
+cp ~/latex-utilities/SpeedyGonzales.sty SpeedyGonzales
+cp ~/latex-utilities/MediocreMike.sty MediocreMike
+cp ~/latex-utilities/Blastoise.sty Blastoise
 
 # Opretter bin
 cd ~
@@ -43,9 +46,6 @@ mkdir -p bin
 # Steder til ssh-mapper
 mkdir ~/hpc
 mkdir ~/hpc-work3
-mkdir ~/raspberry-pi
-mkdir ~/ci-mumbojumbo
-mkdir ~/ci-testdevice
 
 # Sætter .zshrc op
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
@@ -57,7 +57,7 @@ src
 # Installer Python
 sudo pacman -S tk
 yay pyenv
-vpython=3.10.6
+vpython=3.11.4
 pyenv install 3.7.12
 pyenv install $vpython
 pyenv shell $vpython
@@ -66,8 +66,15 @@ pip install --upgrade pip
 pip install wheel
 pip install --upgrade -r ~/environment-setup/requirements.txt
 pip install numba
+# Virtuelt miljø
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+src
+pyenv virtualenv 3.7.12 pelutils
 # CUDA
 # pip install torch torchvision torchaudio --upgrade --no-cache-dir
+# CUDA on AMD
+# echo "export HSA_OVERRIDE_GFX_VERSION=10.3.0" >> ~/.zshrc
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.4.2
 
 # Sætter vs code op (antager allerede installeret)
 cp ~/environment-setup/vs-code/* ~/.config/Code/User

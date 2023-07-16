@@ -84,6 +84,7 @@ then
 	export PATH=$PATH:$PYENV_ROOT/bin
 	eval "$(pyenv init --path)"
 	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
 fi
 
 # export ANDROID_SDK_ROOT=$ANDROID_HOME

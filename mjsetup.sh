@@ -21,7 +21,7 @@ yay python-llvmlite-bin
 yay unzip
 
 # Sætter latexting op
-sudo pacman -S texlive-most
+yay texlive-most
 sudo pacman -S texstudio
 
 # Open texstudio before this step
@@ -67,8 +67,8 @@ pip install wheel
 pip install --upgrade -r ~/environment-setup/requirements.txt
 pip install numba
 # Virtuelt miljø
-git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 src
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 pyenv virtualenv 3.7.12 pelutils
 # CUDA
 # pip install torch torchvision torchaudio --upgrade --no-cache-dir

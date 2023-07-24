@@ -9,6 +9,7 @@ git config --global user.name "Asger Schultz"
 git config --global pull.rebase true
 git config --global credential.helper store
 git config --global alias.fukd "push -f"
+git config --global core.editor nano
 
 # Sætter yay op og opdaterer (antager allerede installeret)
 yay --save --answerclean n --answerdiff n --answeredit n --answerupgrade a

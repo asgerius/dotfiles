@@ -60,5 +60,6 @@
             "selfParameter": "#569CD6",
             "clsParameter": "#569CD6"
         }
-    }
+    },
+    "python.terminal.activateEnvironment": false
 }

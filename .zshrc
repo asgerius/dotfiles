@@ -58,6 +58,8 @@ zle -N my-accept-line
 bindkey "^M" my-accept-line
 ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(my-accept-line)
 
+export GIT_EDITOR=nano
+
 export PYTHONPATH=$PYTHONPATH:~/Desktop/pyaccount
 export PYTHONPATH=$PYTHONPATH:~/Desktop/symbolic-ai/searchclient
 export PYTHONBREAKPOINT="ipdb.set_trace"

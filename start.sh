@@ -24,5 +24,3 @@ chmod +x -R ~/bin/
 yes | cp ~/latex-utilities/convert-to-table.py ~/bin
 yes | mv ~/bin/convert-to-table.py ~/bin/ctt
 chmod +x ~/bin/ctt
-
-cc-clear

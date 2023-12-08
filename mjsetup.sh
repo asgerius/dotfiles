@@ -57,18 +57,16 @@ src
 # Installer Python
 sudo pacman -S tk
 yay pyenv
-vpython=3.11.4
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+src
+vpython=3.11.5
 pyenv install 3.7.12
 pyenv install $vpython
 pyenv shell $vpython
 pyenv global $vpython
 pip install --upgrade pip
 pip install wheel
-pip install --upgrade -r ~/environment-setup/requirements.txt
-pip install numba
 # Virtuelt miljø
-src
-git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 pyenv virtualenv 3.7.12 pelutils
 # CUDA
 # pip install torch torchvision torchaudio --upgrade --no-cache-dir
@@ -83,11 +81,6 @@ cp ~/environment-setup/vs-code/* ~/.config/Code/User
 cd ~/environment-setup
 chmod +x start.sh
 ./start.sh
-
-# Flutter
-cd ~
-git clone https://github.com/flutter/flutter.git -b stable
-flutter doctor
 
 # Programmer
 yay signal-desktop

@@ -78,6 +78,7 @@ chmod +x start.sh
 ./start.sh
 
 # Programmer
+yay nextcloud-client
 yay signal-desktop
 yay discord
 yay teams

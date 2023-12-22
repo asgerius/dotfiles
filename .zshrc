@@ -9,7 +9,7 @@ promptinit
 # Allow comments with hastags
 setopt interactivecomments
 
-#Plugins
+# Plugins
 source ~/environment-setup/zsh/.zsh_plugins.sh
 
 # Lines configured by zsh-newuser-install
@@ -33,11 +33,8 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 
 
-#Don"t do anything in non-interactive
+# Don't do anything in non-interactive
 [[ $- != *i* ]] && return
-
-# Python stuff
-export PYTHONBREAKPOINT="ipdb.set_trace"
 
 # Completion
 zstyle ":completion:*" menu select
@@ -60,24 +57,11 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(my-accept-line)
 
 export GIT_EDITOR=nano
 
-export PYTHONPATH=$PYTHONPATH:~/Desktop/pyaccount
-export PYTHONPATH=$PYTHONPATH:~/Desktop/symbolic-ai/searchclient
+# Pytorch on AMD
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
-export ANDROID_HOME=~/Android/Sdk
-export ANDROID_SDK_ROOT=$ANDROID_HOME
-# export ANDROID_AVD_HOME=~/.android/avd
-
-export PATH=$PATH:~/.local/bin
-export PATH=$PATH:/usr/local/node/bin
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:$ENDLOSUNG
 export PATH=$PATH:~/bin
-
-export PATH=$PATH:~/flutter/bin
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$HOME/.pub-cache/bin
 
 # Setup pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -88,15 +72,6 @@ then
 	eval "$(pyenv init -)"
 	eval "$(pyenv virtualenv-init -)"
 fi
-
-# export ANDROID_SDK_ROOT=$ANDROID_HOME
-# export ANDROID_PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools
-# # export FLUTTER=$BASE_DIR/bin
-# export PATH=$PATH:$ANDROID_PATH
-
-# if [ -d "$HOME/platform-tools" ] ; then
-#   export PATH="$HOME/platform-tools:$PATH"
-# fi
 
 # Stuff thats different on hpc and elsewhere
 if [[ $HOSTNAME == *"gbarlogin2"* || $HOSTNAME == *"gbarlogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"n-62-12-19"* || $HOSTNAME == *"n-62-20-1"* || $HOSTNAME == *"n-62-20-9"* ]];
@@ -112,23 +87,13 @@ fi
 alias pytest="python -m pytest"
 alias jupyter="python -m jupyter lab"
 
-alias src="source ~/.zshrc"
-alias close-emulator="rm -rf $HOME/.android/avd/flutterboi.avd/*.lock"
-alias run-emulator="close-emulator ; flutter emulators --launch flutterboi"
-
-alias xmaple="setsid ~/maple2020/bin/xmaple"
-alias matlab="setsid $HOME/MATLAB/R2020a/bin/matlab > /dev/null 2>&1 &"
-alias pycharm="setsid /usr/local/bin/charm . > /dev/null 2>&1 &"
-alias intellij="setsid $HOME/intellij/bin/idea.sh . > /dev/null 2>&1 &"
-alias android="setsid studio.sh . > /dev/null 2>&1 &"
-
-alias pitu="$NEXTCLOUD/Programmering/indian-tech-support"
-
-alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
-alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh"
 
 # https://unix.stackexchange.com/questions/264632/what-is-the-correct-way-to-view-your-cpu-speed-on-linux
 alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
+alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
+
+alias src="source ~/.zshrc"
+alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh"
 
 # Remote stuff
 alias hpc="ssh login2.gbar.dtu.dk -l s183912"

@@ -23,8 +23,8 @@ yay unzip
 # Sætter latexting op
 yay texlive-most
 sudo pacman -S texstudio
+setsid texstudio && sleep 3 && pkill texstudio
 
-# Open texstudio before this step
 git clone git@github.com:asgerius/latex-utilities.git ~/latex-utilities
 cd ~/latex-utilities
 chmod +x setup.py
@@ -59,20 +59,15 @@ sudo pacman -S tk
 yay pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 src
-vpython=3.11.5
-pyenv install 3.7.12
+pyenv install 3.9.7
+pyenv virtualenv 3.9.7 pelutils
+vpython=3.12.1
 pyenv install $vpython
 pyenv shell $vpython
 pyenv global $vpython
 pip install --upgrade pip
-pip install wheel
-# Virtuelt miljø
-pyenv virtualenv 3.7.12 pelutils
-# CUDA
-# pip install torch torchvision torchaudio --upgrade --no-cache-dir
-# CUDA on AMD
-# echo "export HSA_OVERRIDE_GFX_VERSION=10.3.0" >> ~/.zshrc
-# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/rocm5.4.2
+pip install wheel ipdb
+src
 
 # Sætter vs code op (antager allerede installeret)
 cp ~/environment-setup/vs-code/* ~/.config/Code/User

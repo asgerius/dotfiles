@@ -52,6 +52,7 @@ mkdir ~/hpc-work3
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 . ~/environment-setup/zsh/functions
 source ~/.zshrc
+chsh -s $(which zsh)
 plugins
 src
 

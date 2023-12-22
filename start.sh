@@ -12,6 +12,8 @@ git pull
 python3 latexer/sync.py
 yes | cp -rf macro/* ~/.config/texstudio/macro
 yes | cp -f texstudio.ini ~/.config/texstudio/texstudio.ini
+mkdir -p ~/.config/texstudio/dictionaries
+cp -r *.oxt ~/.config/texstudio/dictionaries
 chmod +x latexer/main.pyw
 yes | cp -f SpeedyGonzales.sty $TEXMF/SpeedyGonzales/SpeedyGonzales.sty
 yes | cp -f MediocreMike.sty $TEXMF/MediocreMike/MediocreMike.sty

@@ -82,5 +82,4 @@ yay nextcloud-client
 yay signal-desktop
 yay discord
 yay teams
-yay slack-desktop
 yay spotify

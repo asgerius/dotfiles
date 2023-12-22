@@ -22,6 +22,7 @@ yay unzip
 
 # Sætter latexting op
 yay texlive-most
+sudo pacman -S biber
 sudo pacman -S texstudio
 setsid texstudio && sleep 3 && pkill texstudio
 

@@ -10,6 +10,16 @@ git config --global pull.rebase true
 git config --global credential.helper store
 git config --global alias.fukd "push -f"
 
+# Sætter yay op og opdaterer (antager allerede installeret)
+yay --save --answerclean n --answerdiff n --answeredit n --answerupgrade a
+
+# Programmer
+yay nextcloud-client
+yay signal-desktop
+yay discord
+yay teams
+yay spotify
+
 # Installerer ting
 sudo pacman -S base-devel
 sudo pacman -S xdotool
@@ -18,13 +28,13 @@ yay -Syy antibody-bin
 yay -Syy ld-lsb
 yay -Syy libselinux
 yay python-llvmlite-bin
-yay unzip
+sudo pacman -S unzip
 
 # Sætter latexting op
 yay texlive-most
 sudo pacman -S biber
 sudo pacman -S texstudio
-setsid texstudio && sleep 3 && pkill texstudio
+texstudio
 
 git clone git@github.com:asgerius/latex-utilities.git ~/latex-utilities
 cd ~/latex-utilities
@@ -49,10 +59,9 @@ mkdir ~/hpc
 mkdir ~/hpc-work3
 
 # Sætter .zshrc op
-echo "source ~/environment-setup/.zshrc" > ~/.zshrc
-. ~/environment-setup/zsh/functions
-source ~/.zshrc
 chsh -s $(which zsh)
+echo "source ~/environment-setup/.zshrc" > ~/.zshrc
+source ~/.zshrc
 plugins
 src
 
@@ -63,7 +72,7 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/py
 src
 pyenv install 3.9.7
 pyenv virtualenv 3.9.7 pelutils
-vpython=3.12.1
+vpython=3.11.7
 pyenv install $vpython
 pyenv shell $vpython
 pyenv global $vpython
@@ -78,10 +87,3 @@ cp ~/environment-setup/vs-code/* ~/.config/Code/User
 cd ~/environment-setup
 chmod +x start.sh
 ./start.sh
-
-# Programmer
-yay nextcloud-client
-yay signal-desktop
-yay discord
-yay teams
-yay spotify

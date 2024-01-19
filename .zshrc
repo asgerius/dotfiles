@@ -94,6 +94,7 @@ alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
 
 alias src="source ~/.zshrc"
 alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh"
+alias novideo-smi='watch -n.1 "/opt/rocm/bin/rocm-smi"'
 
 # Remote stuff
 alias hpc="ssh login2.gbar.dtu.dk -l s183912"

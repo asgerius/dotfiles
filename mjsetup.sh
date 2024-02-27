@@ -24,12 +24,11 @@ yay spotify
 # Installerer ting
 sudo pacman -S base-devel
 sudo pacman -S xdotool
-yay -Syy grabc
-yay -Syy antibody-bin
-yay -Syy ld-lsb
-yay -Syy libselinux
-yay python-llvmlite-bin
+sudo pacman -S ld-lsb
 sudo pacman -S unzip
+yay grabc
+yay antibody-bin
+yay libselinux
 
 # Sætter latexting op
 yay texlive-most
@@ -55,20 +54,17 @@ cp ~/latex-utilities/Blastoise.sty Blastoise
 cd ~
 mkdir -p bin
 
-# Steder til ssh-mapper
-mkdir ~/hpc
-mkdir ~/hpc-work3
-
 # Sætter .zshrc op
 chsh -s $(which zsh)
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 source ~/.zshrc
+src
 plugins
 src
 
 # Installer Python
 sudo pacman -S tk
-yay pyenv
+sudo pacman -S pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
 src
 pyenv install 3.9.7

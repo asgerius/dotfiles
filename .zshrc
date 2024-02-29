@@ -62,6 +62,7 @@ export HSA_OVERRIDE_GFX_VERSION=10.3.0
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export PATH=$PATH:~/bin
+export PATH=$PATH:~/.local/bin
 
 # Setup pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -73,20 +74,13 @@ then
 	eval "$(pyenv virtualenv-init -)"
 fi
 
-# Stuff thats different on hpc and elsewhere
-if [[ $HOSTNAME == *"gbarlogin2"* || $HOSTNAME == *"gbarlogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"hpclogin1"* || $HOSTNAME == *"n-62-12-19"* || $HOSTNAME == *"n-62-20-1"* || $HOSTNAME == *"n-62-20-9"* ]];
-then
-	source ~/.hpcrc
-	export LANG=da_DK.UTF8
-else
-	alias pip="python -m pip"
-	# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
-	export LANG=da_DK.UTF-8
-	export LANGUAGE=da_DK.UTF-8
-fi
+# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
+export LANG=da_DK.UTF-8
+export LANGUAGE=da_DK.UTF-8
+
+alias pip="python -m pip"
 alias pytest="python -m pytest"
 alias jupyter="python -m jupyter lab"
-
 
 # https://unix.stackexchange.com/questions/264632/what-is-the-correct-way-to-view-your-cpu-speed-on-linux
 alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
@@ -95,9 +89,3 @@ alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
 alias src="source ~/.zshrc"
 alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh"
 alias novideo-smi='watch -n.1 "/opt/rocm/bin/rocm-smi"'
-
-# Remote stuff
-alias hpc="ssh login2.gbar.dtu.dk -l s183912"
-alias hpc1="ssh login1.gbar.dtu.dk -l s183912"
-alias hpc-fs="sshfs s183912@login2.gbar.dtu.dk:/zhome/d3/f/137655 ~/hpc"
-alias hpc-fs-work3="sshfs s183912@login2.gbar.dtu.dk:/work3/s183912 ~/hpc-work3"

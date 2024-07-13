@@ -1,9 +1,16 @@
-
 # Foretager en masse setup på en ny computer
 # Først og fremmest kræves nextcloud allerede sat op
 # Dernæst skal denne fil sættes til at køre på opstart
 # Kræver genstart efter kørsel
 
+# Installerer nogle grundlæggende ting
+sudo pacman -Syu
+sudo pacman -S yay
+yay
+sudo pacman -S code
+sudo pacman -S base-devel
+
+# Configurerer git
 git config --global user.email "asger.s@protonmail.com"
 git config --global user.name "Asger Schultz"
 git config --global pull.rebase true
@@ -18,7 +25,6 @@ yay --save --answerclean n --answerdiff n --answeredit n --answerupgrade a
 yay nextcloud-client
 yay signal-desktop
 yay discord
-yay teams
 yay spotify
 
 # Installerer ting
@@ -40,7 +46,7 @@ git clone git@github.com:asgerius/latex-utilities.git ~/latex-utilities
 cd ~/latex-utilities
 chmod +x setup.py
 chmod +x update-tex
-python3 setup.py
+python setup.py
 
 TEXMF=~/texmf/tex/latex/local
 mkdir -p $TEXMF
@@ -58,11 +64,12 @@ mkdir -p bin
 chsh -s $(which zsh)
 echo "source ~/environment-setup/.zshrc" > ~/.zshrc
 source ~/.zshrc
-src
+# Genstart skal, før følgende køres
 plugins
 src
 
 # Installer Python
+sudo pacman -S python-pipx
 sudo pacman -S tk
 sudo pacman -S pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
@@ -77,8 +84,9 @@ pip install --upgrade pip
 pip install wheel ipdb
 src
 
-# Sætter vs code op (antager allerede installeret)
+# Sætter vs code op
 cp ~/environment-setup/vs-code/* ~/.config/Code/User
+cp ~/environment-setup/vs-code/* ~/.config/Code\ -\ OSS/User
 
 # Kører opstart
 cd ~/environment-setup

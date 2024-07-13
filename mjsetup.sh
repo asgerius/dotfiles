@@ -5,10 +5,10 @@
 
 # Installerer nogle grundlæggende ting
 sudo pacman -Syu
+sudo pacman -S base-devel
 sudo pacman -S yay
 yay
-sudo pacman -S code
-sudo pacman -S base-devel
+yay visual-studio-code-bin
 
 # Configurerer git
 git config --global user.email "asger.s@protonmail.com"
@@ -86,7 +86,6 @@ src
 
 # Sætter vs code op
 cp ~/environment-setup/vs-code/* ~/.config/Code/User
-cp ~/environment-setup/vs-code/* ~/.config/Code\ -\ OSS/User
 
 # Kører opstart
 cd ~/environment-setup

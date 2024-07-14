@@ -70,6 +70,7 @@ src
 
 # Installer Python
 sudo pacman -S python-pipx
+sudo pacman -S python-pyserial
 sudo pacman -S tk
 sudo pacman -S pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv

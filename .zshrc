@@ -1,6 +1,6 @@
 export HOSTNAME=$(cat /proc/sys/kernel/hostname)
 
-. ~/environment-setup/zsh/functions
+. ~/dotfiles/zsh/functions
 
 autoload -Uz compinit promptinit
 compinit
@@ -10,7 +10,7 @@ promptinit
 setopt interactivecomments
 
 # Plugins
-source ~/environment-setup/zsh/.zsh_plugins.sh
+source ~/dotfiles/zsh/.zsh_plugins.sh
 
 # Lines configured by zsh-newuser-install
 HISTSIZE=2000
@@ -74,10 +74,6 @@ then
 	eval "$(pyenv virtualenv-init -)"
 fi
 
-# https://stackoverflow.com/questions/30000008/how-can-i-change-gnucash-ui-language
-export LANG=da_DK.UTF-8
-export LANGUAGE=da_DK.UTF-8
-
 alias pip="python -m pip"
 alias pytest="python -m pytest"
 alias jupyter="python -m jupyter lab"
@@ -87,5 +83,5 @@ alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
 alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
 
 alias src="source ~/.zshrc"
-alias plugins="antibody bundle < ~/environment-setup/zsh/zsh_plugins.txt > ~/environment-setup/zsh/.zsh_plugins.sh"
+alias plugins="antibody bundle < ~/dotfiles/zsh/zsh_plugins.txt > ~/dotfiles/zsh/.zsh_plugins.sh"
 alias novideo-smi='watch -n.1 "/opt/rocm/bin/rocm-smi"'

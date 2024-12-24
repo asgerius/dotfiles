@@ -10,11 +10,10 @@ sudo pacman -S yay
 yay
 yay visual-studio-code-bin
 
-# Configurerer git
+# Konfigurerer git
 git config --global user.email "asger.s@protonmail.com"
 git config --global user.name "Asger Schultz"
 git config --global pull.rebase true
-git config --global credential.helper store
 git config --global alias.fukd "push -f"
 git config --global core.editor nano
 
@@ -77,7 +76,7 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/py
 src
 pyenv install 3.9.7
 pyenv virtualenv 3.9.7 pelutils
-vpython=3.11.7
+vpython=3.13.1
 pyenv install $vpython
 pyenv shell $vpython
 pyenv global $vpython

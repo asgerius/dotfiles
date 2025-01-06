@@ -7,8 +7,11 @@
 sudo pacman -Syu
 sudo pacman -S base-devel
 sudo pacman -S yay
-yay
+yay --save --answerclean n --answerdiff n --answeredit n --answerupgrade a
 yay visual-studio-code-bin
+
+mkdir -p ~/.config/Code/User
+cp vs-code/*.json ~/.config/Code/User
 
 # Konfigurerer git
 git config --global user.email "asger.s@protonmail.com"
@@ -16,9 +19,6 @@ git config --global user.name "Asger Schultz"
 git config --global pull.rebase true
 git config --global alias.fukd "push -f"
 git config --global core.editor nano
-
-# Sætter yay op og opdaterer (antager allerede installeret)
-yay --save --answerclean n --answerdiff n --answeredit n --answerupgrade a
 
 # Programmer
 yay nextcloud-client
@@ -61,33 +61,28 @@ mkdir -p bin
 
 # Sætter .zshrc op
 chsh -s $(which zsh)
-echo "source ~/environment-setup/.zshrc" > ~/.zshrc
+zsh
+echo "source ~/dotfiles/.zshrc" > ~/.zshrc
 source ~/.zshrc
 # Genstart skal, før følgende køres
 plugins
 src
 
 # Installer Python
-sudo pacman -S python-pipx
 sudo pacman -S python-pyserial
 sudo pacman -S tk
 sudo pacman -S pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
-src
 pyenv install 3.9.7
 pyenv virtualenv 3.9.7 pelutils
-vpython=3.13.1
+vpython=3.13.0
 pyenv install $vpython
 pyenv shell $vpython
 pyenv global $vpython
 pip install --upgrade pip
 pip install wheel ipdb
-src
-
-# Sætter vs code op
-cp ~/environment-setup/vs-code/* ~/.config/Code/User
 
 # Kører opstart
-cd ~/environment-setup
+cd ~/dotfiles
 chmod +x start.sh
 ./start.sh

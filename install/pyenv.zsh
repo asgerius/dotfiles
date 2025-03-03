@@ -1,5 +1,6 @@
 set -e
 
+src
 rm -rf ~/.pyenv
 curl https://pyenv.run | bash
 pyenv install 3.9.21

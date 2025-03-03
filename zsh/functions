@@ -1,3 +1,6 @@
+plugins () {
+    antibody bundle < ~/dotfiles/zsh/zsh_plugins.txt > ~/dotfiles/zsh/.zsh_plugins.sh
+}
 
 my-accept-line () {
     # check if the buffer does not contain any words

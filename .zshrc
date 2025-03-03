@@ -32,10 +32,6 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 
-
-# Don't do anything in non-interactive
-[[ $- != *i* ]] && return
-
 # Completion
 zstyle ":completion:*" menu select
 zstyle ":completion::complete:*" gain-privileges 1
@@ -83,5 +79,4 @@ alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
 alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
 
 alias src="source ~/.zshrc"
-alias plugins="antibody bundle < ~/dotfiles/zsh/zsh_plugins.txt > ~/dotfiles/zsh/.zsh_plugins.sh"
 alias novideo-smi='watch -n.1 "/opt/rocm/bin/rocm-smi"'

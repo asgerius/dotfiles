@@ -14,7 +14,7 @@ my-accept-line () {
             git status
         else
             # else run `ls'
-            ls --color=auto
+            ls -la
         fi
     fi
     # in any case run the `accept-line' widget

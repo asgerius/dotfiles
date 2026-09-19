@@ -53,8 +53,6 @@ ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(my-accept-line)
 
 export GIT_EDITOR=nano
 
-# Pytorch on AMD
-export HSA_OVERRIDE_GFX_VERSION=10.3.0
 export PYTHONBREAKPOINT="ipdb.set_trace"
 
 export PATH=$PATH:~/bin
@@ -72,11 +70,8 @@ fi
 
 alias pip="python -m pip"
 alias pytest="python -m pytest"
-alias jupyter="python -m jupyter lab"
 
 # https://unix.stackexchange.com/questions/264632/what-is-the-correct-way-to-view-your-cpu-speed-on-linux
 alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'
-alias ugenr="curl -s https://ugenr.dk/ | grep -o -P -m 1 '(?=Uge).*(?=starter)'"
 
 alias src="source ~/.zshrc"
-alias novideo-smi='watch -n.1 "/opt/rocm/bin/rocm-smi"'

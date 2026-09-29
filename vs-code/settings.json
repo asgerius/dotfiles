@@ -17,5 +17,6 @@
     "explorer.confirmDragAndDrop": false,
     "C_Cpp.updateChannel": "Insiders",
     "python.showStartPage": false,
-    "python.terminal.activateEnvironment": false
+    "python.terminal.activateEnvironment": false,
+    "chat.disableAIFeatures": true
 }

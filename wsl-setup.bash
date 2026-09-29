@@ -3,6 +3,7 @@ set -e
 bash install/wsl-libs.sh
 bash install/zsh.sh
 zsh install/pyenv.zsh
+zsh install/uv.zsh
 
 git config --global core.autocrlf input
 git config --global user.name "Asger S"

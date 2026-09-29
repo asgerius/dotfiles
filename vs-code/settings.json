@@ -1,34 +1,10 @@
 {
-    // "files.autoSave": "afterDelay",
     "workbench.startupEditor": "newUntitledFile",
-    "telemetry.enableTelemetry": false,
-    "[dart]": {
-        "editor.formatOnSave": false,
-        "editor.formatOnType": false,
-        "editor.rulers": [
-            125
-        ],
-        "editor.selectionHighlight": false,
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "editor.suggestSelection": "first",
-        "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false,
-    },
-    "editor.tokenColorCustomizations": {
-        "[Default Dark+]": {
-            "variables": "#DDDDDD"
-        }
-    },
+    "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "truecolor",
-    "todo-tree.tree.showScanModeButton": false,
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontSize": 15,
     "explorer.confirmDelete": false,
-    // "python.languageServer": "Pylance",
-    // "python.analysis.typeCheckingMode": "basic",
-    // "python.analysis.completeFunctionParens": true
-    "todo-tree.highlights.enabled": false,
-    "dart.openDevTools": "flutter",
     "files.exclude": {
         "**/__pycache__": true
     },
@@ -36,30 +12,10 @@
     "python.defaultInterpreterPath": "python",
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
-    "python.languageServer": "Pylance",
     "files.autoSave": "afterDelay",
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Visual Studio Dark",
     "explorer.confirmDragAndDrop": false,
     "C_Cpp.updateChannel": "Insiders",
     "python.showStartPage": false,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "[ ]",
-        "[x]"
-    ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "[Default Dark+]": {
-        "rules": {
-            "selfParameter": "#569CD6",
-            "clsParameter": "#569CD6"
-        }
-    },
     "python.terminal.activateEnvironment": false
 }

@@ -58,18 +58,7 @@ export PYTHONBREAKPOINT="ipdb.set_trace"
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/.local/bin
 
-# Setup pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-if [ -d "$PYENV_ROOT" ];
-then
-	export PATH=$PATH:$PYENV_ROOT/bin
-	eval "$(pyenv init --path)"
-	eval "$(pyenv init -)"
-	eval "$(pyenv virtualenv-init -)"
-fi
-
-alias pip="python -m pip"
-alias pytest="python -m pytest"
+export UV_PREVIEW_FEATURES=centralized-project-envs
 
 # https://unix.stackexchange.com/questions/264632/what-is-the-correct-way-to-view-your-cpu-speed-on-linux
 alias cpuspeed='watch -n.1 "cat /proc/cpuinfo | grep \"^[c]pu MHz\""'

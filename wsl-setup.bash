@@ -2,7 +2,6 @@ set -e
 
 bash install/wsl-libs.sh
 bash install/zsh.sh
-zsh install/pyenv.zsh
 zsh install/uv.zsh
 zsh install/opencode.zsh
 
